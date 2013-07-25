@@ -1,0 +1,26 @@
+[user]
+	name = David Haberthür
+	email = email@davidhaberthuer.ch
+
+[alias]
+	dt = difftool
+	# pretty and short output
+	l = log --graph --pretty=format:'%C(red)%h%Creset%C(green)%d%Creset %C(black)%s%Creset %C(white dim)(by %an %ar)%Creset'
+	# view all branches in short form
+	ll = !git l --all
+	# short status
+	s = status -s
+
+[core]
+	editor = vi
+	excludesfile = ~/.gitignore
+
+[color]
+	ui = auto
+
+[difftool]
+	prompt = false
+
+[diff]
+	external = meld
+	tool = meld
