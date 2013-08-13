@@ -23,6 +23,7 @@ alias sage='/scratch/Apps/sage-5.0/sage -notebook'
 alias tw='/scratch/Apps/texworks/texworks &'
 alias winterm1='rm ~/.freerdp/known_hosts;xfreerdp -u haberthuer -d  psich --plugin cliprdr -g 1280x970 -x lan Winterm1'
 alias sublime='/scratch/Apps/Sublime\ Text\ 2/sublime_text &'
+alias rstudio='/scratch/Apps/rstudio-0.97.551/bin/rstudio &'
 export TODOTXT_DEFAULT_ACTION=ls
 alias t='todo.sh -d ~/todotodo.cfg'
 alias p='python ~/todo/Punch.py'
