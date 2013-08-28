@@ -4,9 +4,6 @@
 " Set encoding
 set enc=utf-8
 
-" use mouse as usual
-set mouse=a
-
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
@@ -19,7 +16,6 @@ set lbr
 "show this in front of broken lines
 set showbreak=…
 
-""""
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 
@@ -117,4 +113,3 @@ function! StripWhitespace()
 	call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
-
