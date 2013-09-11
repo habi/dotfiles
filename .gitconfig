@@ -30,3 +30,5 @@
 	tool = meld
 [help]
 	autocorrect = 1
+[init]
+	templatedir = ~/.git_template
