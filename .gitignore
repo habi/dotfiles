@@ -1,6 +1,7 @@
 # LaTeX
 *.aux
 *.bbl
+*.bcf
 *.blg
 *.brf
 *.fdb_latexmk
@@ -8,6 +9,7 @@
 *.log
 *.out
 *.pdf
+*.run.xml
 *.synctex.gz
 *.toc
 gitHeadInfo.gin
