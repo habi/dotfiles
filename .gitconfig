@@ -1,7 +1,6 @@
 [user]
 	name = David Haberthür
 	email = email@davidhaberthuer.ch
-
 [alias]
 	dt = difftool
 	# pretty and short output
@@ -10,21 +9,16 @@
 	ll = !git l --all
 	# short status
 	s = status -s
-
 [core]
-	editor = vi
+	editor = vim
 	excludesfile = ~/.gitignore
     whitespace = trailing-space,space-before-tab
-
 [apply]
     whitespace = fix
-
 [color]
 	ui = auto
-
 [difftool]
 	prompt = false
-
 [diff]
 	external = meld
 	tool = meld
