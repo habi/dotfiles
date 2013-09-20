@@ -117,3 +117,7 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " highlight long lines according to http://stackoverflow.com/a/235970/323100
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
 match OverLength /\%81v.\+/
+
+"spell checking and wrapping at 72 for commit messages, according to
+"http://robots.thoughtbot.com/post/48933156625
+autocmd Filetype gitcommit setlocal spell textwidth=72
