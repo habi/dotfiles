@@ -4,7 +4,7 @@
 [alias]
 	dt = difftool
 	# pretty and short output
-	l = log --graph --pretty=format:'%C(red)%h%Creset%C(green)%d%Creset %C(black)%s%Creset %C(white dim)(by %an %ar)%Creset'
+	l = log --graph --pretty=format:'%C(red)%h%Creset%C(green)%d%Creset %C(black)%s%Creset %C(white dim)%an, %ar%Creset'
 	# view all branches in short form
 	ll = !git l --all
 	# short status
@@ -16,11 +16,10 @@
 [apply]
     whitespace = fix
 [color]
-	ui = auto
+	ui = true
 [difftool]
 	prompt = false
 [diff]
-	external = meld
 	tool = meld
 [help]
 	autocorrect = 1
