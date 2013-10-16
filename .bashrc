@@ -19,15 +19,24 @@ alias filezilla='/scratch/Apps/FileZilla3/bin/filezilla &'
 alias idl_tomcat='/work/sls/lib/X_TOMO_IDLTOOLS/settings/tomcat_start &'
 alias matlab='module add matlab;matlab'
 alias mendeley='/scratch/Apps/Mendeley/bin/mendeleydesktop &'
-alias sage='/scratch/Apps/sage-5.0/sage -notebook'
 alias tw='/scratch/Apps/texworks/texworks &'
 alias winterm1='rm ~/.freerdp/known_hosts;xfreerdp -u haberthuer -d  psich --plugin cliprdr -x lan Winterm1'
 alias sublime='/scratch/Apps/Sublime\ Text\ 2/sublime_text &'
 alias rstudio='/scratch/Apps/rstudio-0.97.551/bin/rstudio &'
-export TODOTXT_DEFAULT_ACTION=ls
-alias t='todo.sh -d ~/todotodo.cfg'
-alias p='python ~/todo/Punch.py'
 
 # Path
-PATH=/scratch/Apps/texlive/2012/bin/i386-linux:$PATH:$HOME:$HOME/bin:/afs/psi.ch/project/sls/X02DA/Software/bin_i386/:/afs/psi.ch/user/h/haberthuer/bin:/afs/psi.ch/user/h/haberthuer:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/.cabal/bin:/opt/python3/bin/
+PATH=/scratch/Apps/texlive/2012/bin/i386-linux:$PATH
+PATH=$HOME:$PATH
+PATH=$HOME/bin:$PATH
+PATH=/afs/psi.ch/project/sls/X02DA/Software/bin_i386/:$PATH
+PATH=/usr/local/bin:$PATH
+PATH=/usr/bin:$PATH
+PATH=/bin:$PATH
+PATH=/usr/local/sbin:$PATH
+PATH=/usr/sbin:$PATH
+PATH=/sbin:$PATH
+PATH=$HOME/.cabal/bin:$PATH
+PATH=/opt/python3/bin/:$PATH
+PATH=/opt/python3/lib:$PATH
+PATH=/usr/lib:$PATH
 export PATH
