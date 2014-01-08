@@ -1,108 +1,45 @@
-" based on https://github.com/mathiasbynens/dotfiles/blob/master/.vimrc
-" updated from https://github.com/phux/phuxvim/blob/master/.vimrc
+" Switching to [pathogen](https://github.com/tpope/vim-pathogen) and [sensible.vim](https://github.com/tpope/vim-sensible]
+" and still keeping my most important settings.
 
-" Set encoding
-set enc=utf-8
+execute pathogen#infect()
 
-" Set 'nocompatible' to ward off unexpected things that your distro might
-" have made, as well as sanely reset options when re-sourcing .vimrc
-set nocompatible
-
-"set textwidth=79
-" Line wrapping
-set wrap
-" but don't split words
-set lbr
-"show this in front of broken lines
-set showbreak=…
-
-" Use the OS clipboard by default (on versions compiled with `+clipboard`)
-set clipboard=unnamed
-
-" Enhance command-line completion
-set wildmenu
-
-" Allow cursor keys in insert mode
-set esckeys
-
-" Allow backspace in insert mode
-set backspace=indent,eol,start
-
-" Optimize for fast terminal connections
-set ttyfast
-
-" Add the g flag to search/replace by default
-set gdefault
-
-" Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-if exists("&undodir")
-	set undodir=~/.vim/undo
-endif
-
-" Respect modeline in files
-set modeline
-set modelines=4
-
-" Make tabs as wide as four spaces
-set tabstop=4
-
-" Enable per-directory .vimrc files and disable unsafe commands in them
-set exrc
-set secure
+filetype plugin indent on
 
 " Enable line numbers
 set number
 
+" Make tabs as wide as four spaces
+set shiftwidth=4
+
 " Enable syntax highlighting
-syntax on
+syntax enable
+
+" Set line width
+set textwidth=79
+" wrap lines that are longer than the length above, but don't split words
+" and mark the continuation line with ...
+set wrap
+set lbr
+set showbreak=…
+
+" use [solarized theme](" https://github.com/altercation/vim-colors-solarized)
+set background=dark
+colorscheme solarized
 
 " Highlight current line
 set cursorline
 
-" Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
-
-" Highlight searches
-set hlsearch
-
 " Ignore case of searches
 set ignorecase
-
-" Highlight dynamically as pattern is typed
-set incsearch
-
-" Always show status line
-set laststatus=2
 
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
 
-" Show the cursor position
-set ruler
-
 " Don’t show the intro message when starting Vim
 set shortmess=atI
 
-" Show the current mode
-set showmode
-
 " Show the filename in the window titlebar
 set title
-
-" Show the (partial) command as it’s being typed
-set showcmd
-
-" Use relative line numbers
-if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
-endif
-
-" Start scrolling three lines before the horizontal window border
-set scrolloff=3
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
