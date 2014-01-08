@@ -13,3 +13,5 @@
 *.synctex.gz
 *.toc
 gitHeadInfo.gin
+# Vim
+*.swp
