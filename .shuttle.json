@@ -1,0 +1,15 @@
+{
+	"terminal": "Terminal.app",
+	"launch_at_login": true,
+	"show_ssh_config_hosts": true,
+	"hosts": [
+		{
+			"name": "balrog.psi.ch",
+			"cmd": "ssh haberthuer@balrog.psi.ch"
+		},
+		 {
+			 "name": "slslc.psi.ch",
+			 "cmd": "ssh -X -Y haberthuer@slslc06.psi.ch"
+		 }
+	]
+}
