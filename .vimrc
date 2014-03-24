@@ -18,7 +18,10 @@ syntax enable
 set lcs=tab:▸\ ,trail:·,eol:¬
 set list
 
-" wrap lines at, but don't split words and mark the continuation line with an ellipsis.
+" Check spelling
+set spell
+
+" wrap lines at window border, but don't split words and mark the continuation line with an ellipsis.
 set wrap
 set linebreak
 set nolist
