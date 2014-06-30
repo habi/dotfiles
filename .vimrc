@@ -14,12 +14,17 @@ set shiftwidth=4
 " Enable syntax highlighting
 syntax enable
 
-" Set line width
-set textwidth=79
-" wrap lines that are longer than the length above, but don't split words
-" and mark the continuation line with ...
+" Show “invisible” characters
+set lcs=tab:▸\ ,trail:·,eol:¬
+set list
+
+" Check spelling
+set spell
+
+" wrap lines at window border, but don't split words and mark the continuation line with an ellipsis.
 set wrap
-set lbr
+set linebreak
+set nolist
 set showbreak=…
 
 " use [solarized theme](" https://github.com/altercation/vim-colors-solarized)

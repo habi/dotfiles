@@ -4,6 +4,7 @@
 *.bcf
 *.blg
 *.brf
+*.dvi
 *.fdb_latexmk
 *.fls
 *.log
@@ -15,3 +16,6 @@
 gitHeadInfo.gin
 # Vim
 *.swp
+# Other stuff
+*.bak
+Thumbs.db
