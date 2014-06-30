@@ -7,9 +7,9 @@
 			"name": "balrog.psi.ch",
 			"cmd": "ssh haberthuer@balrog.psi.ch"
 		},
-		 {
-			 "name": "slslc.psi.ch",
-			 "cmd": "ssh -X -Y haberthuer@slslc06.psi.ch"
-		 }
+		{
+			"name": "slslc.psi.ch",
+			"cmd": "ssh -X -Y haberthuer@slslc06.psi.ch"
+		}
 	]
 }
