@@ -37,3 +37,5 @@
     # be fast-forwarded. See `A successful Git branching model` on 
     # http://nvie.com/posts/a-successful-git-branching-model/
     mergeoptions = --no-commit --no-ff
+[merge]
+	ff = false
