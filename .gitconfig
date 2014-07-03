@@ -1,31 +1,39 @@
 [user]
-	name = David Haberthür
-	email = email@davidhaberthuer.ch
+    name = David Haberthür
+    email = email@davidhaberthuer.ch
 [alias]
-	dt = difftool
-	# pretty and short output
-	l = log --graph --pretty=format:'%C(red)%h%Creset%C(green)%d%Creset %C(white dim)%s%Creset %C(white)%an, %ar%Creset'
-	# view all branches in short form
-	ll = !git l --all
-	# short status
-	s = status -s
+    dt = difftool
+    # pretty and short output
+    l = log --graph --pretty=format:'%C(red)%h%Creset%C(green)%d%Creset %C(white dim)%s%Creset %C(white)%an, %ar%Creset'
+    # view all branches in short form
+    ll = !git l --all
+    # short status
+    s = status -s
 [core]
-	editor = vim
-	excludesfile = ~/.gitignore
-	whitespace = trailing-space,space-before-tab
+    editor = vim
+    excludesfile = ~/.gitignore
+    whitespace = trailing-space,space-before-tab
 [apply]
-	whitespace = fix
+    whitespace = fix
 [color]
-	ui = true
+    ui = true
 [difftool]
-	prompt = false
+    prompt = false
 [diff]
-	tool = meld
+    tool = meld
 [help]
-	autocorrect = 1
+    autocorrect = 1
 [init]
-	templatedir = ~/.git_template
+    templatedir = ~/.git_template
 [push]
-	default = matching
-[credential]
-	helper = cache --timeout=3600
+    default = matching
+[branch "master"]
+    # Merge commits into 'master' branch without fast-forwarding.
+    # According to http://stackoverflow.com/a/2850413/323100
+    # `--no-commit` does not commit by default, allowing to make some
+    # adjustments to the commit log before it gets committed. Useful
+    # for adding additional info to the merge message
+    # `--no-ff` always records a merge commit, even if the branch could
+    # be fast-forwarded. See `A successful Git branching model` on 
+    # http://nvie.com/posts/a-successful-git-branching-model/
+    mergeoptions = --no-commit --no-ff
