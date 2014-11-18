@@ -1,0 +1,11 @@
+# Automatically log in to this mailbox at startup
+set folder="imaps://haberthuer@mail.ethz.ch"
+set spoolfile="imaps://haberthuer@mail.ethz.ch/INBOX"
+set postponed="=Drafts"
+
+# Set up stuff
+set editor='vim'
+set ispell="aspell -e -c"
+
+# Try to view HTML emails, according to http://is.gd/wRfkdC
+auto_view text/html
