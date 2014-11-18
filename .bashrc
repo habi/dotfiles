@@ -24,6 +24,7 @@ alias somafm='mplayer -really-quiet -vo none http://somafm.com/groovesalad.pls'
 
 # Path
 PATH=$HOME:$PATH
+PATH=$HOME/.cabal/bin:$PATH
 PATH=$HOME/bin:$PATH
 PATH=/afs/psi.ch/project/sls/X02DA/Software/bin_i386/:$PATH
 export PATH
