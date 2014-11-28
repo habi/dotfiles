@@ -29,13 +29,9 @@
     default = matching
 [branch "master"]
     # Merge commits into 'master' branch without fast-forwarding.
-    # According to http://stackoverflow.com/a/2850413/323100
-    # `--no-commit` does not commit by default, allowing to make some
-    # adjustments to the commit log before it gets committed. Useful
-    # for adding additional info to the merge message
     # `--no-ff` always records a merge commit, even if the branch could
     # be fast-forwarded. See `A successful Git branching model` on 
     # http://nvie.com/posts/a-successful-git-branching-model/
-    mergeoptions = --no-commit --no-ff
+    mergeoptions = --no-ff
 [merge]
-	ff = false
+    ff = false
