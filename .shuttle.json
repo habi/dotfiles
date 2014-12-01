@@ -4,12 +4,20 @@
 	"show_ssh_config_hosts": true,
 	"hosts": [
 		{
-			"name": "balrog.psi.ch",
+			"name": "Balrog",
 			"cmd": "ssh haberthuer@balrog.psi.ch"
 		},
 		{
-			"name": "slslc.psi.ch",
+			"name": "SLS LC",
 			"cmd": "ssh -X -Y haberthuer@slslc06.psi.ch"
+		},
+		{
+			"name": "X02DA Gateway",
+			"cmd": "ssh -X -Y haberthuer@x02da-gw.psi.ch"
+		},
+		{
+			"name": "NoMachine Tunnel",
+			"cmd": "ssh -L 10000:x02da-cons-1.psi.ch:22 haberthuer@rem-acc-gw01.psi.ch"
 		}
 	]
 }
