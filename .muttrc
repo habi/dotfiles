@@ -2,6 +2,7 @@
 set folder="imaps://haberthuer@mail.ethz.ch"
 set spoolfile="imaps://haberthuer@mail.ethz.ch/INBOX"
 set postponed="=Drafts"
+set record="Gesendete Objekte"
 
 # Set up stuff
 set editor='vim'
