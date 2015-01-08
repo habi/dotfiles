@@ -1,12 +1,33 @@
-# Automatically log in to this mailbox at startup
-set folder="imaps://haberthuer@mail.ethz.ch"
-set spoolfile="imaps://haberthuer@mail.ethz.ch/INBOX"
-set postponed="=Drafts"
-set record="Gesendete Objekte"
+# Set correct sender address and signature
+set from="David Haberthür <david.haberthuer@psi.ch>"
+set signature="~/.signature"
 
-# Set up stuff
+# Automatically log in to this mailbox at startup
+set spoolfile="imaps://haberthuer@mail.ethz.ch/INBOX"
+# Save Mails on server ("=")
+set folder="imaps://haberthuer@mail.ethz.ch"
+set postponed="=Drafts"
+set record="=Gesendete Objekte"
+set trash="=Deleted Items"
+
+# Help with writing emails
 set editor='vim'
 set ispell="aspell -e -c"
+
+# Some general settings from http://dev.mutt.org/trac/wiki/MuttGuide/UseIMAP
+# activate TLS if available on the server
+set ssl_starttls=yes
+# Reduce polling frequency to a sane level
+set mail_check=60
+# keep a cache of headers for faster loading
+set header_cache=~/.hcache
+# Display download progress every 5K
+set net_inc=5
+
+# Diplay thread list automatically
+set sort=threads
+# Do not ask about appending when filing mails
+set noconfirmappend
 
 # Try to view HTML emails, according to http://is.gd/wRfkdC
 auto_view text/html
