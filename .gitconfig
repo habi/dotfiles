@@ -34,4 +34,5 @@
     # http://nvie.com/posts/a-successful-git-branching-model/
     mergeoptions = --no-ff
 [merge]
+    tool = meld
     ff = false
