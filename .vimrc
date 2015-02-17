@@ -18,6 +18,9 @@ syntax enable
 set lcs=tab:▸\ ,trail:·,eol:¬
 set list
 
+" set font
+set guifont=Inconsolata:h18
+
 " Check spelling
 set spell
 
