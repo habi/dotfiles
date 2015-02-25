@@ -1,33 +1,49 @@
 # Set correct sender address and signature
+set realname = "David Haberthür"
 set from="David Haberthür <david.haberthuer@psi.ch>"
 set signature="~/.signature"
 
-# Automatically log in to this mailbox at startup
+# Set Inbox and SMTP server
 set spoolfile="imaps://haberthuer@mail.ethz.ch/INBOX"
+set smtp_url="smtp://mail.psi.ch:25/"
 # Save Mails on server ("=")
 set folder="imaps://haberthuer@mail.ethz.ch"
 set postponed="=Drafts"
 set record="=Gesendete Objekte"
 set trash="=Deleted Items"
+# Other IMAP and mailbox settings
+set confirmappend = no                         
+set imap_keepalive = 300
 
-# Help with writing emails
-set editor='vim'
-set ispell="aspell -e -c"
+# Help wit composing mails (some info from http://git.io/uRKPTA
+set editor        = 'vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'
+set ispell        = "aspell -e -c"
+set askcc         = yes # Ask for 'CC:'
+set fast_reply    = yes # Skip to composing
+set forward_quote = yes # Include message in forward
+set include       = yes # Include message in reply
+set reply_to      = yes # Reply to 'Reply to:'
 
 # Some general settings from http://dev.mutt.org/trac/wiki/MuttGuide/UseIMAP
-# activate TLS if available on the server
-set ssl_starttls=yes
-# Reduce polling frequency to a sane level
-set mail_check=60
-# keep a cache of headers for faster loading
-set header_cache=~/.hcache
-# Display download progress every 5K
-set net_inc=5
+set ssl_starttls = yes              # activate TLS if available on the server
+set mail_check   = 60               # Reduce polling frequency to a sane level
+set header_cache = ~/.mailcache     # Keep caches according to http://dev.mutt.org/trac/wiki/MuttGuide/Caching
+set message_cachedir = ~/.mailcache # ditto
+set net_inc      = 5                # Display download progress every 5K
 
-# Diplay thread list automatically
-set sort=threads
+# Display thread list automatically
+set sort = threads
 # Do not ask about appending when filing mails
-set noconfirmappend
+set confirmappend = no
 
 # Try to view HTML emails, according to http://is.gd/wRfkdC
 auto_view text/html
+
+# HEADERS
+ignore *                                                 # Ignore all headers
+unignore from: to: cc: bcc: date: subject:               # Do NOT ignore these
+hdr_order from: to: cc: bcc: date: subject:              # In this order please
+# FORMATS & EDITOR
+set forward_format = "Fwd: %s"
+set index_format="%Z | %-16.16L | %s"
+set status_format  = "-%r- %v ---[Folder: %f, Msgs: %m%?n? New: %n?%?d? Del: %d?%?t? Tag: %t?%?l? %l? ]%?p?---- .: %p waiting to send :. ?--%>- (%P) ---"
