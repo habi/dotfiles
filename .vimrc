@@ -62,3 +62,8 @@ noremap <leader>ss :call StripWhitespace()<CR>
 "spell checking and wrapping at 72 for commit messages, according to
 "http://robots.thoughtbot.com/post/48933156625
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" Snippets
+iab ysc yours sincerely<CR>David Haberthür
+iab mfg mit freundlichen Grüssen<CR>David Haberthür
+iab sig --<CR>Dr. David Haberthür<CR>Swiss Light Source<CR>Paul Scherrer Institut<CR>WBBA/218<CR>CH-5232 Villigen<CR>+41 56 310 31 80
