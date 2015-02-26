@@ -30,6 +30,9 @@ set mail_check   = 60               # Reduce polling frequency to a sane level
 set header_cache = ~/.mailcache     # Keep caches according to http://dev.mutt.org/trac/wiki/MuttGuide/Caching
 set message_cachedir = ~/.mailcache # ditto
 set net_inc      = 5                # Display download progress every 5K
+set delete
+set pager_stop
+set narrow_tree
 
 # Display thread list automatically
 set sort = threads
