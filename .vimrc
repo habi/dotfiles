@@ -1,18 +1,19 @@
-" Switching to [pathogen](https://github.com/tpope/vim-pathogen) and [sensible.vim](https://github.com/tpope/vim-sensible]
-" and still keeping my most important settings.
-
+" Use [pathogen](https://github.com/tpope/vim-pathogen) and [sensible.vim](https://github.com/tpope/vim-sensible]
 execute pathogen#infect()
-
+syntax on
 filetype plugin indent on
 
-" Enable line numbers
-set number
+" General settings
+set number " Enable line numbers
+set title " Show the filename in the window titlebar
+set shortmess=atI " Don’t show the intro message when starting Vim
+set mouse=a " Enable mouse
 
-" Make tabs as wide as four spaces
-set shiftwidth=4
+" Search
+set ignorecase " Ignore case of searches
 
-" Enable syntax highlighting
-syntax enable
+" Tab settings
+set shiftwidth=4  " Make tabs as wide as four spaces
 
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬
@@ -24,30 +25,23 @@ set guifont=Inconsolata:h18
 " Check spelling
 set spell
 
-" wrap lines at window border, but don't split words and mark the continuation line with an ellipsis.
+" wrap lines at window border, don't split words and mark the continuation line with an ellipsis.
 set wrap
 set linebreak
 set nolist
 set showbreak=…
+set scrolloff=3 " don't let the cursor touch the edge of the viewport
+if exists('&breakindent')
+set breakindent " Indent wrapped lines up to the same level
+endif
+
+" Cursor things
+set cursorline " Highlight current line
+set nostartofline " Don’t reset cursor to start of line when moving around.
 
 " use [solarized theme](" https://github.com/altercation/vim-colors-solarized)
 set background=dark
 colorscheme solarized
-
-" Highlight current line
-set cursorline
-
-" Ignore case of searches
-set ignorecase
-
-" Don’t reset cursor to start of line when moving around.
-set nostartofline
-
-" Don’t show the intro message when starting Vim
-set shortmess=atI
-
-" Show the filename in the window titlebar
-set title
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
