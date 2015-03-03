@@ -7,7 +7,6 @@ filetype plugin indent on
 set number " Enable line numbers
 set title " Show the filename in the window titlebar
 set shortmess=atI " Don’t show the intro message when starting Vim
-set mouse=a " Enable mouse
 
 " Search
 set ignorecase " Ignore case of searches
