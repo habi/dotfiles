@@ -1,4 +1,2 @@
-text/html; pandoc -f html -t markdown; copiousoutput; compose=vim %s
-# text/html;		links %s; nametemplate=%s.html
-# text/html;		links -dump %s; nametemplate=%s.html; copiousoutput
+text/html;		links -dump %s; nametemplate=%s.html; copiousoutput
 application/pdf;	mimeopen %s
