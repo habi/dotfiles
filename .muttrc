@@ -1,47 +1,52 @@
 # Set correct sender address and signature
-set realname = "David Haberthür"
-set from="David Haberthür <david.haberthuer@psi.ch>"
-set signature="~/.signature"
+set realname         = "David Haberthür"
+set from             = "David Haberthür <david.haberthuer@psi.ch>"
+set signature        = ~/.signature
 
 # Set Inbox and SMTP server
-set spoolfile="imaps://haberthuer@mail.ethz.ch/INBOX"
-set smtp_url="smtp://mail.psi.ch:25/"
+set imap_user        = haberthuer
+set imap_pass        = $imappass
+set spoolfile        = imaps://mail.ethz.ch/INBOX
+set folder           = imaps://mail.ethz.ch
+set smtp_url         = smtp://mail.psi.ch:25/
 # Save Mails on server ("=")
-set folder="imaps://haberthuer@mail.ethz.ch"
-set postponed="=Drafts"
-set record="=Gesendete Objekte"
-set trash="=Deleted Items"
+set postponed        = =Drafts
+set record           = "=Gesendete Objekte"
+set trash            = "=Deleted Items"
 # Other IMAP and mailbox settings
-set confirmappend = no                         
-set imap_keepalive = 300
+set confirmappend    = no                         
+set imap_keepalive   = 300
 
 # Help with composing mails (some info from http://git.io/uRKPTA
-set alias_file= ~/.mutt/aliases
-set sort_alias= alias
-set reverse_alias=yes
+set alias_file       = ~/.mutt/aliases
+set sort_alias       = alias
+set reverse_alias    = yes
 source $alias_file
-set editor        = "vim +':set textwidth=0' +':set wrapmargin=0' +':set wrap'"
-set ispell        = "aspell -e -c"
-set askcc         = yes # Ask for 'CC:'
-set fast_reply    = yes # Skip to composing
-set forward_quote = yes # Include message in forward
-set include       = yes # Include message in reply
-set reply_to      = yes # Reply to 'Reply to:'
+set editor           = "vim +':set textwidth=0' +':set wrapmargin=0' +':set wrap'"
+set ispell           = "aspell -e -c"
+set askcc            = yes # Ask for 'CC:'
+set fast_reply       = yes # Skip to composing
+set forward_quote    = yes # Include message in forward
+set mime_forward     = yes # Forward attachments
+set mime_forward_rest= yes # Forward attachments
+set include          = yes # Include message in reply
+set reply_to         = yes # Reply to 'Reply to:'
 
 # Some general settings from http://dev.mutt.org/trac/wiki/MuttGuide/UseIMAP
-set ssl_starttls = yes              # activate TLS if available on the server
-set mail_check   = 60               # Reduce polling frequency to a sane level
-set header_cache = ~/.mailcache     # Keep caches according to http://dev.mutt.org/trac/wiki/MuttGuide/Caching
-set message_cachedir = ~/.mailcache # ditto
-set net_inc      = 5                # Display download progress every 5K
+set ssl_starttls     = yes              # activate TLS if available on the server
+set mail_check       = 60               # Reduce polling frequency to a sane level
+set header_cache     = ~/.mailcache     # Keep caches according to http://dev.mutt.org/trac/wiki/MuttGuide/Caching
+set message_cachedir = ~/.mailcache     # ditto
+set net_inc          = 5                # Display download progress every 5K
 set delete
 set pager_stop
 set narrow_tree
+bind editor <space> noop                # Allow for spaces in folder names: http://forums.debian.net/viewtopic.php?f=10&t=80626
 
 # Display thread list automatically
-set sort = threads
+set sort           = threads
 # Do not ask about appending when filing mails
-set confirmappend = no
+set confirmappend  = no
 
 # Try to view HTML emails, according to http://is.gd/wRfkdC
 auto_view text/html
@@ -52,8 +57,11 @@ unignore from: to: cc: bcc: date: subject:   # Do NOT ignore these
 hdr_order from: to: cc: bcc: date: subject:  # In this order please
 # FORMATS & EDITOR
 set forward_format = "Fwd: %s"
-set index_format="%Z | %-16.16L | %s"
+set index_format   = "%Z | %-16.16L | %s"
 set status_format  = "-%r- %v ---[Folder: %f, Msgs: %m%?n? New: %n?%?d? Del: %d?%?t? Tag: %t?%?l? %l? ]%?p?---- .: %p waiting to send :. ?--%>- (%P) ---"
+
+# pretty-print
+set print_command  = muttprint
 
 # Solarize this shit!
 source ~/.mutt/mutt-colors-solarized-dark-16.muttrc
