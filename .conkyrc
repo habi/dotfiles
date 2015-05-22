@@ -1,0 +1,19 @@
+alignment bottom_right
+own_window_class Conky
+own_window_type desktop
+update_interval 60
+minimum_size 800 50
+background yes
+double_buffer yes
+
+TEXT
+${color grey}RAM Usage:$color $mem/$memmax - $memperc% ${membar 4}
+${color grey}Swap Usage:$color $swap/$swapmax - $swapperc% ${swapbar 4}
+${color grey}CPU Usage:$color $cpu% ${cpubar 4}
+$hr
+${color lightgrey} ${top name 1} ${top cpu 1} ${top mem 1}
+${color lightgrey} ${top name 2} ${top cpu 2} ${top mem 2}
+${color lightgrey} ${top name 3} ${top cpu 3} ${top mem 3}
+${color lightgrey} ${top name 4} ${top cpu 4} ${top mem 4}
+$hr
+${execpi 300 gcalcli --conky agenda --nocolor}
