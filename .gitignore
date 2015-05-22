@@ -9,8 +9,10 @@
 *.fls
 *.log
 *.out
+*.nav
 *.pdf
 *.run.xml
+*.snm
 *.synctex.gz
 *.toc
 gitHeadInfo.gin
