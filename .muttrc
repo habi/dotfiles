@@ -65,3 +65,6 @@ set print_command  = muttprint
 
 # Solarize this shit!
 source ~/.mutt/mutt-colors-solarized-dark-16.muttrc
+
+# Key bindings
+bind index G imap-fetch-mail  # http://unix.stackexchange.com/a/49986
