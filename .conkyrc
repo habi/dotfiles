@@ -4,7 +4,7 @@ alignment bottom_right
 background yes
 use_xft yes
 total_run_times 0
-double_buffer yes
+# double_buffer yes
 draw_shades yes
 update_interval 60
 minimum_size 500 50
