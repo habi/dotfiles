@@ -27,8 +27,8 @@ set ispell           = "aspell -e -c"
 set askcc            = yes # Ask for 'CC:'
 set fast_reply       = yes # Skip to composing
 set forward_quote    = yes # Include message in forward
-set mime_forward     = yes # Forward attachments
-set mime_forward_rest= yes # Forward attachments
+#set mime_forward     = yes # Forward attachments
+#set mime_forward_rest= yes # Forward attachments
 set include          = yes # Include message in reply
 set reply_to         = yes # Reply to 'Reply to:'
 
