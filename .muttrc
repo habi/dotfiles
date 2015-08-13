@@ -32,6 +32,9 @@ set forward_quote    = yes # Include message in forward
 set include          = yes # Include message in reply
 set reply_to         = yes # Reply to 'Reply to:'
 
+# Bind to PSI LDAP, according to http://www.christianschenk.org/blog/integrating-ldap-into-mutt/
+set query_command="lbdbq '%s'"
+
 # Some general settings from http://dev.mutt.org/trac/wiki/MuttGuide/UseIMAP
 set ssl_starttls     = yes              # activate TLS if available on the server
 set mail_check       = 60               # Reduce polling frequency to a sane level
