@@ -21,7 +21,8 @@ alias idl_tomcat='/work/sls/lib/X_TOMO_IDLTOOLS/settings/tomcat_start &'
 alias matlab='module add matlab;matlab'
 alias winterm1='xfreerdp -u haberthuer -d  psich --plugin cliprdr -x lan -g 1600x1100 winterm1.psi.ch'
 alias somafm='mplayer -really-quiet -vo none http://somafm.com/groovesalad.pls'
-alias pycharm='/scratch/pycharm-community-4.0/bin/pycharm.sh &'
+alias pycharm='/scratch/pycharm-community-4.5.1/bin/pycharm.sh &'
+alias m='mutt'
 # Path
 PATH=$HOME:$PATH
 PATH=$HOME/.cabal/bin:$PATH

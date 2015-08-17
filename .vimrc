@@ -44,7 +44,7 @@ endif
 set cursorline " Highlight current line
 set nostartofline " Don’t reset cursor to start of line when moving around.
 
-" use [solarized theme](" https://github.com/altercation/vim-colors-solarized)
+" use [solarized theme](https://github.com/altercation/vim-colors-solarized)
 set background=dark
 colorscheme solarized
 
@@ -62,7 +62,12 @@ noremap <leader>ss :call StripWhitespace()<CR>
 "http://robots.thoughtbot.com/post/48933156625
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
+" vim-latex
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+
 " Snippets
 iab ysc yours sincerely<CR>David Haberthür
 iab mfg mit freundlichen Grüssen<CR>David Haberthür
 iab sig --<CR>Dr. David Haberthür<CR>Swiss Light Source<CR>Paul Scherrer Institut<CR>WBBA/218<CR>CH-5232 Villigen<CR>+41 56 310 31 80
+iab gdx GlobalDiagnostiX project [1]<CR>[1]: http://globaldiagnostix.org
