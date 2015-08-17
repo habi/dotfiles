@@ -23,9 +23,12 @@ alias winterm1='xfreerdp -u haberthuer -d  psich --plugin cliprdr -x lan -g 1600
 alias somafm='mplayer -really-quiet -vo none http://somafm.com/groovesalad.pls'
 alias pycharm='/scratch/pycharm-community-4.5.1/bin/pycharm.sh &'
 alias m='mutt'
+alias instavideos='youtube-dl https://www.instapaper.com/rss/821883/5Syx27oaNKCCSCENuj71zTAE -i'
+
 # Path
 PATH=$HOME:$PATH
 PATH=$HOME/.cabal/bin:$PATH
 PATH=$HOME/bin:$PATH
 PATH=/afs/psi.ch/project/sls/X02DA/Software/bin_i386/:$PATH
+PATH=/usr/local/heroku/bin:$PATH
 export PATH
