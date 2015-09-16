@@ -9,11 +9,9 @@ set imap_pass        = $imappass
 set spoolfile        = imaps://mail.ethz.ch/INBOX
 set folder           = imaps://mail.ethz.ch
 set smtp_url         = smtp://mail.psi.ch:25/
-# Save Mails on server ("=")
 set postponed        = =Drafts
 set record           = "=Gesendete Objekte"
 set trash            = "=Deleted Items"
-# Other IMAP and mailbox settings
 set confirmappend    = no                         
 set imap_keepalive   = 300
 
@@ -24,34 +22,39 @@ set reverse_alias    = yes
 source $alias_file
 set editor           = "vim +':set textwidth=0' +':set wrapmargin=0' +':set wrap'"
 set ispell           = "aspell -e -c"
-set askcc            = yes # Ask for 'CC:'
-set fast_reply       = yes # Skip to composing
-set forward_quote    = yes # Include message in forward
-#set mime_forward     = yes # Forward attachments
-#set mime_forward_rest= yes # Forward attachments
-set include          = yes # Include message in reply
-set reply_to         = yes # Reply to 'Reply to:'
+
+# Replying, forwarding, saving mails
+set askcc             = yes      # Ask for 'CC:'
+set fast_reply        = yes      # Directly go to compose when replying, don't ask for subject
+set include           = yes      # Include message in reply
+set forward_edit      = ask-yes  # Automatically start editor when forwarding
+set forward_quote     = yes      # Include message in forward
+set mime_forward      = yes      # Forward files as attachments instead of inline
+set mime_forward_rest = yes      # Always forward other attachments, too
+set forward_decode    = no       # Don't decode MIME messages to text/plain when forwarding
+set include           = yes      # Include message in reply
+set reply_to          = yes      # Reply to 'Reply to:'
+set confirmappend     = no       # Do not ask for confirmation when saving messages
 
 # Bind to PSI LDAP, according to http://www.christianschenk.org/blog/integrating-ldap-into-mutt/
 set query_command="lbdbq '%s'"
 
-# Some general settings from http://dev.mutt.org/trac/wiki/MuttGuide/UseIMAP
-set ssl_starttls     = yes              # activate TLS if available on the server
-set mail_check       = 60               # Reduce polling frequency to a sane level
-set header_cache     = ~/.mailcache     # Keep caches according to http://dev.mutt.org/trac/wiki/MuttGuide/Caching
-set message_cachedir = ~/.mailcache     # ditto
-set net_inc          = 5                # Display download progress every 5K
-set delete
-set pager_stop
-set narrow_tree
-bind editor <space> noop                # Allow for spaces in folder names: http://forums.debian.net/viewtopic.php?f=10&t=80626
+# Some general settings from http://dev.mutt.org/trac/wiki/MuttGuide/UseIMAP and other sources
+set ssl_starttls     = yes            # activate TLS if available on the server
+set mail_check       = 60             # Reduce polling frequency to a sane level
+set header_cache     = ~/.mailcache   # Keep caches according to http://dev.mutt.org/trac/wiki/MuttGuide/Caching
+set message_cachedir = ~/.mailcache   # ditto
+set net_inc          = 5              # Display download progress every 5K
+set delete           = yes            # Don't ask to delete, just do it.
+set pager_stop       = yes            # Do not scroll jump into next message at the bottom of this message
+bind editor <space> noop              # Allow for spaces in folder names: http://forums.debian.net/viewtopic.php?f=10&t=80626
 
-# Display thread list automatically
+# Display
 set sort           = threads
-# Do not ask about appending when filing mails
-set confirmappend  = no
+set narrow_tree    = yes
 
-# Try to view HTML emails, according to http://is.gd/wRfkdC
+# HTML emails stink
+set implicit_autoview = yes
 auto_view text/html
 
 # HEADERS
