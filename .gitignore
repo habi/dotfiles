@@ -20,4 +20,5 @@ gitHeadInfo.gin
 *.swp
 # Other stuff
 *.bak
+.DS_Store
 Thumbs.db
