@@ -22,10 +22,11 @@ alias matlab='module add matlab;matlab'
 alias winterm1='xfreerdp -u haberthuer -d  psich --plugin cliprdr -x lan -g 1600x1100 winterm1.psi.ch'
 alias somafm='mplayer -really-quiet -vo none http://somafm.com/groovesalad.pls'
 alias pycharm='/scratch/pycharm-community-4.5.1/bin/pycharm.sh &'
-alias m='mutt'
+alias m='cd && mutt'
 # Path
 PATH=$HOME:$PATH
 PATH=$HOME/.cabal/bin:$PATH
 PATH=$HOME/bin:$PATH
 PATH=/afs/psi.ch/project/sls/X02DA/Software/bin_i386/:$PATH
+PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 export PATH
