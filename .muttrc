@@ -57,16 +57,17 @@ set narrow_tree    = yes
 set implicit_autoview = yes
 auto_view text/html
 
-# HEADERS
+# Headers
 ignore *                                     # Ignore all headers
 unignore from: to: cc: bcc: date: subject:   # Do NOT ignore these
 hdr_order from: to: cc: bcc: date: subject:  # In this order please
-# FORMATS & EDITOR
+
+# Formats & Editor
 set forward_format = "Fwd: %s"
 set index_format   = "%Z | %-16.16L | %s"
 set status_format  = "-%r- %v ---[Folder: %f, Msgs: %m%?n? New: %n?%?d? Del: %d?%?t? Tag: %t?%?l? %l? ]%?p?---- .: %p waiting to send :. ?--%>- (%P) ---"
 
-# pretty-print
+# For the occasional email printout
 set print_command  = muttprint
 
 # Solarize this shit!
