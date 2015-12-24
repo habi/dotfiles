@@ -4,16 +4,20 @@
 	"show_ssh_config_hosts": true,
 	"hosts": [
 		{
+			"name": "Raspberry Pi",
+			"cmd": "ssh pi@192.168.1.128"
+		},
+		{
 			"name": "Balrog",
 			"cmd": "ssh haberthuer@balrog.psi.ch"
 		},
 		{
 			"name": "SLS LC",
-			"cmd": "ssh -X -Y haberthuer@slslc06.psi.ch"
+			"cmd": "ssh -Y haberthuer@slslc06.psi.ch"
 		},
 		{
 			"name": "X02DA Gateway",
-			"cmd": "ssh -X -Y haberthuer@x02da-gw.psi.ch"
+			"cmd": "ssh -Y haberthuer@x02da-gw.psi.ch"
 		},
 		{
 			"name": "NoMachine Tunnel",
