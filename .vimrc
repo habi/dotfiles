@@ -67,7 +67,7 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
 " Snippets
-iab ysc yours sincerely<CR>David Haberthür
-iab mfg mit freundlichen Grüssen<CR>David Haberthür
+iab ysc Yours sincerely<CR>David Haberthür
+iab mfg Mit freundlichen Grüssen<CR>David Haberthür
 iab sig --<CR>Dr. David Haberthür<CR>Swiss Light Source<CR>Paul Scherrer Institut<CR>WBBA/218<CR>CH-5232 Villigen<CR>+41 56 310 31 80
 iab gdx GlobalDiagnostiX project [1]<CR>[1]: http://globaldiagnostix.org

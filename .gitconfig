@@ -18,10 +18,10 @@
 [color]
     ui = true
 [merge]
-	tool = meld
+    tool = meld
     ff=false
 [diff]
-	tool = meld
+    tool = meld
 [difftool]
     prompt = false
     tool = meld

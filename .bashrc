@@ -21,8 +21,8 @@ alias idl_tomcat='/work/sls/lib/X_TOMO_IDLTOOLS/settings/tomcat_start &'
 alias matlab='module add matlab;matlab'
 alias winterm1='xfreerdp -u haberthuer -d  psich --plugin cliprdr -x lan -g 1600x1100 winterm1.psi.ch'
 alias somafm='mplayer -really-quiet -vo none http://somafm.com/groovesalad.pls'
-alias pycharm='/scratch/pycharm-community-4.5.1/bin/pycharm.sh &'
-alias m='mutt'
+alias pycharm='/scratch/pycharm-community-5.0.1/bin/pycharm.sh &'
+alias m='cd && mutt'
 alias instavideos='youtube-dl https://www.instapaper.com/rss/821883/5Syx27oaNKCCSCENuj71zTAE -i'
 
 # Path
@@ -30,5 +30,6 @@ PATH=$HOME:$PATH
 PATH=$HOME/.cabal/bin:$PATH
 PATH=$HOME/bin:$PATH
 PATH=/afs/psi.ch/project/sls/X02DA/Software/bin_i386/:$PATH
+PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 PATH=/usr/local/heroku/bin:$PATH
 export PATH
