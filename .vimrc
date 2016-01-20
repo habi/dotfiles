@@ -44,9 +44,13 @@ endif
 set cursorline " Highlight current line
 set nostartofline " Don’t reset cursor to start of line when moving around.
 
+" change color scheme
 " use [solarized theme](https://github.com/altercation/vim-colors-solarized)
-set background=dark
-colorscheme solarized
+" set background=dark
+" colorscheme solarized
+" or any other one https://github.com/flazz/vim-colorschemes
+set background=light
+colorscheme inkpot
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
