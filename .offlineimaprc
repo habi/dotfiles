@@ -12,9 +12,6 @@ autorefresh = 5
 quick = 10
 [Repository Local]
 type = Maildir
-# Specify local repository. Your IMAP folders will be synchronized
-# to maildirs created under this path. OfflineIMAP will create the
-# maildirs for you as needed.
 localfolders = /scratch/PSI-mail/
 sep = /
 restoreatime = no
@@ -26,3 +23,4 @@ remoteuser = psich/haberthuer
 maxconnections = 2
 holdconnectionopen = no
 subscribedonly = no
+folderfilter = lambda foldername: foldername not in ['Kalender']
