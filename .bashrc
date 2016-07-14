@@ -3,11 +3,11 @@
 # User specific aliases and functions
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+if [ -f /etc/bash.bashrc ]; then
+	. /etc/bash.bashrc
 fi
 
-# set first few characters
+# set line beginning
 PS1="[\u@\h|\W]:"
 
 # do some coloring in the terminal
@@ -16,20 +16,12 @@ alias ls='ls --color=yes'
 alias grep='grep --color=yes'
 alias less='less -R'
 
-# Aliases
-alias idl_tomcat='/work/sls/lib/X_TOMO_IDLTOOLS/settings/tomcat_start &'
-alias matlab='module add matlab;matlab'
-alias winterm1='xfreerdp -u haberthuer -d  psich --plugin cliprdr -x lan -g 1600x1100 winterm1.psi.ch'
-alias somafm='mplayer -really-quiet -vo none http://somafm.com/groovesalad.pls'
-alias pycharm='/scratch/pycharm-community-5.0.1/bin/pycharm.sh &'
+# aliases
+alias 1272='xfreerdp /v:anamic02.unibe.ch /u:haberthu /multimon'
+alias 1172='xfreerdp /v:anaklin18.unibe.ch /u:haberthu /multimon'
+alias somafm='mplayer -really-quiet -vo none -playlist http://somafm.com/groovesalad.pls'
 alias m='cd && mutt'
-alias instavideos='youtube-dl https://www.instapaper.com/rss/821883/5Syx27oaNKCCSCENuj71zTAE -i'
 
-# Path
+# path
 PATH=$HOME:$PATH
-PATH=$HOME/.cabal/bin:$PATH
-PATH=$HOME/bin:$PATH
-PATH=/afs/psi.ch/project/sls/X02DA/Software/bin_i386/:$PATH
-PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
-PATH=/usr/local/heroku/bin:$PATH
 export PATH

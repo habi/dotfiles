@@ -2,9 +2,9 @@
 # This specifies where offlineimap is to store its metadata.
 metadata = ~/.offlineimap
 # This variable specifies which accounts are defined.
-accounts = PSI
+accounts = ana
 maxsyncaccounts = 1
-[Account PSI]
+[Account ana]
 # These settings specify the two folders that you will be syncing.
 localrepository = Local
 remoterepository = Remote
@@ -12,17 +12,16 @@ autorefresh = 5
 quick = 10
 [Repository Local]
 type = Maildir
-# Specify local repository. Your IMAP folders will be synchronized
-# to maildirs created under this path. OfflineIMAP will create the
-# maildirs for you as needed.
-localfolders = /scratch/PSI-mail/
+localfolders = /home/habi/mail/ana/
 sep = /
 restoreatime = no
 [Repository Remote]
 type = IMAP
-remotehost = mail.ethz.ch
+remotehost = mail.campus.unibe.ch
+remoteuser = campus/haberthu
 ssl = yes
-remoteuser = psich/haberthuer
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 maxconnections = 2
 holdconnectionopen = no
 subscribedonly = no
+folderfilter = lambda foldername: foldername not in ['Kalender']
