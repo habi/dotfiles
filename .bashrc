@@ -17,12 +17,16 @@ alias grep='grep --color=yes'
 alias less='less -R'
 
 # aliases
-alias 1272='xfreerdp /v:anamic02.unibe.ch /u:haberthu /multimon'
-alias 1172='xfreerdp /v:anaklin18.unibe.ch /u:haberthu /multimon'
+alias 1272='xfreerdp /v:anamic02.unibe.ch /u:haberthu /f'
+alias 1172='xfreerdp /v:anaklin18.unibe.ch /u:haberthu /f'
 alias somafm='mplayer -really-quiet -vo none -playlist http://somafm.com/groovesalad.pls'
-alias m='cd && mutt & cd -'
 alias instaload='youtube-dl https://www.instapaper.com/rss/821883/5Syx27oaNKCCSCENuj71zTAE -i -w'i
+alias m='cd && mutt'
+alias fiji='/scratch/Fiji.app/ImageJ-linux64'
 
 # path
 PATH=$HOME:$PATH
 export PATH
+
+# added by Miniconda3 4.0.5 installer
+export PATH="/home/habi/miniconda3/bin:$PATH"

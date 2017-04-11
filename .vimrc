@@ -7,6 +7,8 @@ filetype plugin indent on
 set number " Enable line numbers
 set title " Show the filename in the window titlebar
 set shortmess=atI " Don’t show the intro message when starting Vim
+set encoding=utf-8  " The encoding displayed.
+set fileencoding=utf-8  " The encoding written to file.
 
 " Arrow keys are unacceptable: http://is.gd/R4NwqI
 map <Left> :echo "Use h instead of the Left Arrow!"<cr>
