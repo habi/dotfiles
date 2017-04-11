@@ -20,7 +20,8 @@ alias less='less -R'
 alias 1272='xfreerdp /v:anamic02.unibe.ch /u:haberthu /multimon'
 alias 1172='xfreerdp /v:anaklin18.unibe.ch /u:haberthu /multimon'
 alias somafm='mplayer -really-quiet -vo none -playlist http://somafm.com/groovesalad.pls'
-alias m='cd && mutt'
+alias m='cd && mutt & cd -'
+alias instaload='youtube-dl https://www.instapaper.com/rss/821883/5Syx27oaNKCCSCENuj71zTAE -i -w'i
 
 # path
 PATH=$HOME:$PATH
