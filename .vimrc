@@ -71,5 +71,4 @@ let g:tex_flavor='latex'
 " Snippets
 iab ysc Yours sincerely<CR>David Haberthür
 iab mfg Mit freundlichen Grüssen<CR>David Haberthür
-iab sig --<CR>Dr. David Haberthür<CR>Swiss Light Source<CR>Paul Scherrer Institut<CR>WBBA/218<CR>CH-5232 Villigen<CR>+41 56 310 31 80
-iab gdx GlobalDiagnostiX project [1]<CR>[1]: http://globaldiagnostix.org
+iab sig --<CR>University of Bern<CR>Institute of Anatomy<CR>Dr. David Haberthür (usually off on Thursday)<CR>Post-Doc<CR>Baltzerstrasse 2<CR>CH-3000 Bern 9
