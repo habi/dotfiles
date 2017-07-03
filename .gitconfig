@@ -12,7 +12,8 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore
-    whitespace = trailing-space,space-before-tab
+    whitespace = blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+    autocrlf = input
 [apply]
     whitespace = fix
 [color]
@@ -21,9 +22,9 @@
     tool = meld
     ff=false
 [diff]
-    tool = meld
+	tool = meld
 [difftool]
-    prompt = false
+	prompt = false
     tool = meld
 [help]
     autocorrect = 1
