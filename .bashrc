@@ -17,11 +17,14 @@ alias grep='grep --color=yes'
 alias less='less -R'
 
 # aliases
-alias 1272='xfreerdp /v:anamic02.unibe.ch /u:haberthu /f'
-alias 1172='xfreerdp /v:anaklin18.unibe.ch /u:haberthu /f'
-alias somafm='mplayer -really-quiet -vo none -playlist http://somafm.com/groovesalad.pls'
-alias m='cd && mutt'
+alias 1272='xfreerdp /v:anamic02.unibe.ch /u:haberthu /w:1600 /h:1150'
+alias 1172='xfreerdp /v:anaklin18.unibe.ch /u:haberthu /w:1600 /h:1150'
+alias prism='xfreerdp /v:anasoft.unibe.ch /u:haberthu /w:1600 /h:1150'
+alias somafm='mplayer -really-quiet -vo none -volume 128 -playlist http://somafm.com/groovesalad.pls'
+alias goa='mplayer -really-quiet -vo none -volume 128 -playlist http://somafm.com/suburbsofgoa.pls'
+alias m='cd && mutt && cd -'
 alias fiji='/scratch/Fiji.app/ImageJ-linux64'
+alias pycharm='/scratch/pycharm-community-2016.2.3/bin/pycharm.sh'
 
 # path
 PATH=$HOME:$PATH
