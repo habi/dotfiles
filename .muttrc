@@ -16,14 +16,14 @@ set trash            = "=Deleted Items"
 set confirmappend    = no                         
 set imap_keepalive   = 300
 
-# Help with composing mails (some info from http://git.io/uRKPTA
+# Help with composing mails (some info from https://git.io/v7NeW)
 set alias_file       = ~/.mutt/aliases
 set sort_alias       = alias
 set reverse_alias    = yes
 source $alias_file
 set editor           = "vim +':set textwidth=0' +':set wrapmargin=0' +':set wrap'"
 set ispell           = "aspell -e -c"
-#set charset="utf-8"
+set charset          = "utf-8"
 #set locale=`echo "${LC_ALL:-${LC_TIME:-${LANG}}}"`
 #set send_charset="us-ascii:iso-8859-15:utf-8"
 #set file_charset="us-ascii:iso-8859-15:utf-8"
@@ -41,7 +41,7 @@ set include           = yes      # Include message in reply
 set reply_to          = yes      # Reply to 'Reply to:'
 set confirmappend     = no       # Do not ask for confirmation when saving messages
 
-# Bind to PSI LDAP, according to http://www.christianschenk.org/blog/integrating-ldap-into-mutt/
+# Bind to Unibe LDAP, according to http://www.christianschenk.org/blog/integrating-ldap-into-mutt/
 set query_command="lbdbq '%s'"
 
 # Some general settings from http://dev.mutt.org/trac/wiki/MuttGuide/UseIMAP and other sources
@@ -83,3 +83,6 @@ bind index G imap-fetch-mail  # http://unix.stackexchange.com/a/49986
 # Scan URLs in mails (https://is.gd/vHQcXf)
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs"
 macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs"
+
+# Save spam to junk folder (from http://archive.oreilly.com/pub/post/mutt_tweaks_for_spam_filtering.html adapted with https://stackoverflow.com/a/32391272/323100)
+macro index,pager S "<save-message>=Junk%20E-Mail<enter>"
