@@ -19,6 +19,7 @@ alias less='less -R'
 # aliases
 alias 1272='xfreerdp /v:anamic02.unibe.ch /u:haberthu /w:1600 /h:1150'
 alias 1172='xfreerdp /v:anaklin18.unibe.ch /u:haberthu /w:1600 /h:1150'
+alias anaklin03='xfreerdp /v:anaklin03.unibe.ch /u:haberthu /w:1600 /h:1150'
 alias prism='xfreerdp /v:anasoft.unibe.ch /u:haberthu /w:1600 /h:1150'
 alias vsphere='xfreerdp /v:units.unibe.ch /u:haberthu'
 alias somafm='mplayer -really-quiet -vo none -volume 128 -playlist http://somafm.com/groovesalad.pls'
