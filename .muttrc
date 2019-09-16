@@ -1,14 +1,14 @@
 # Set correct sender address and signature
 set realname         = "David Haberthür"
 set from             = "David Haberthür <david.haberthuer@ana.unibe.ch>"
-set signature        = ~/.signature
+set signature        = ~/P/uni-sig.txt
 
 # Set Inbox and SMTP server
 set imap_user        = haberthu
 set imap_pass        = $imappass
 set spoolfile        = imaps://mail.campus.unibe.ch/INBOX
 set folder           = imaps://mail.campus.unibe.ch
-set smtp_url         = smtp://smtp.unibe.ch
+set smtp_url         = "smtp://haberthu:$imappass@mail.campus.unibe.ch:587/"
 set ssl_force_tls    = yes
 set postponed        = =Drafts
 set record           = "=Sent Items"
