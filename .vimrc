@@ -64,13 +64,12 @@ noremap <leader>ss :call StripWhitespace()<CR>
 "http://robots.thoughtbot.com/post/48933156625
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
-" vim-latex
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor='latex'
+" vim-markdown: YAML-header https://stackoverflow.com/a/36414534/323100
+let g:vim_markdown_frontmatter = 1
 
 " Snippets
-iab ysc Yours sincerely<CR>David Haberthür
-iab mfg Mit freundlichen Grüssen<CR>David Haberthür
+iab ysc Yours sincerely<CR>David Haberthür<CR>
+iab mfg Mit freundlichen Grüssen<CR>David Haberthür<CR>
 iab sig --<CR>University of Bern<CR>Institute of Anatomy<CR>Dr. David Haberthür (usually off on Thursday)<CR>Post-Doc<CR>Baltzerstrasse 2<CR>CH-3000 Bern 9
 iab olex Oleksiy
 iab hlus Hlushchuk
