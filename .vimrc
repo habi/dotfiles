@@ -67,6 +67,10 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 " vim-markdown: YAML-header https://stackoverflow.com/a/36414534/323100
 let g:vim_markdown_frontmatter = 1
 
+" Hotkeys
+" NERDtree: https://github.com/scrooloose/nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
 " Snippets
 iab ysc Yours sincerely<CR>David Haberthür<CR>
 iab mfg Mit freundlichen Grüssen<CR>David Haberthür<CR>
