@@ -1,20 +1,22 @@
 # Set correct sender address and signature
 set realname         = "David Haberthür"
-set from             = "David Haberthür <david.haberthuer@ana.unibe.ch>"
+set from             = "David Haberthür <haberthuer@ana.unibe.ch>"
 set signature        = ~/P/uni-sig.txt
 
 # Set Inbox and SMTP server
-set imap_user        = haberthu
-set imap_pass        = $imappass
-set spoolfile        = imaps://mail.campus.unibe.ch/INBOX
-set folder           = imaps://mail.campus.unibe.ch
-set smtp_url         = "smtp://haberthu:$imappass@mail.campus.unibe.ch:587/"
-set ssl_force_tls    = yes
-set postponed        = =Drafts
-set record           = "=Sent Items"
-set trash            = "=Deleted Items"
-set confirmappend    = no                         
-set imap_keepalive   = 300
+set imap_user           = haberthu
+set imap_pass           = $imappass
+set spoolfile           = imaps://mail.campus.unibe.ch/INBOX
+set folder              = imaps://mail.campus.unibe.ch
+set smtp_url            = "smtp://haberthu:$imappass@mail.campus.unibe.ch:587/"
+set ssl_starttls        = yes
+set smtp_authenticators =login
+set ssl_force_tls       = yes
+set postponed           = =Drafts
+set record              = "=Sent Items"
+set trash               = "=Deleted Items"
+set confirmappend       = no                         
+set imap_keepalive      = 300
 
 # Help with composing mails (some info from https://git.io/v7NeW)
 set alias_file       = ~/.mutt/aliases
@@ -40,9 +42,6 @@ set forward_decode    = no       # Don't decode MIME messages to text/plain when
 set include           = yes      # Include message in reply
 set reply_to          = yes      # Reply to 'Reply to:'
 set confirmappend     = no       # Do not ask for confirmation when saving messages
-
-# Bind to Unibe LDAP, according to http://www.christianschenk.org/blog/integrating-ldap-into-mutt/
-set query_command="lbdbq '%s'"
 
 # Some general settings from http://dev.mutt.org/trac/wiki/MuttGuide/UseIMAP and other sources
 set mail_check       = 60             # Reduce polling frequency to a sane level
