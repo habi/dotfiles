@@ -9,22 +9,25 @@
     ll = !git l --all
     # short status
     s = status -s
+    diff-image = "!f() { GIT_DIFF_IMAGE_ENABLED=1 git diff \"$@\"; }; f"
 [core]
     editor = vim
     excludesfile = ~/.gitignore
     whitespace = blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
     autocrlf = input
+    attributesfile = ~/.gitattributes
+	filemode = false
+	filemode = false
 [apply]
     whitespace = fix
 [color]
     ui = true
 [merge]
     tool = meld
-    ff=false
 [diff]
-	tool = meld
+    tool = meld
 [difftool]
-	prompt = false
+    prompt = false
     tool = meld
 [help]
     autocorrect = 1
@@ -32,9 +35,8 @@
     templatedir = ~/.git_template
 [push]
     default = matching
-[branch "master"]
-    # Merge commits into 'master' branch without fast-forwarding.
-    # `--no-ff` always records a merge commit, even if the branch could
-    # be fast-forwarded. See `A successful Git branching model` on 
-    # http://nvie.com/posts/a-successful-git-branching-model/
-    mergeoptions = --no-ff
+[filter "lfs"]
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
