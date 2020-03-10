@@ -12,9 +12,9 @@ set smtp_url            = "smtp://haberthu:$imappass@mail.campus.unibe.ch:587/"
 set ssl_starttls        = yes
 set smtp_authenticators =login
 set ssl_force_tls       = yes
-set postponed           = =Drafts
-set record              = "=Sent Items"
-set trash               = "=Deleted Items"
+set postponed           = =Entwürfe
+set record              = "=Gesendete Elemente"
+set trash               = "=Gelöschte Elemente"
 set confirmappend       = no                         
 set imap_keepalive      = 300
 
@@ -84,4 +84,4 @@ macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract U
 macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs"
 
 # Save spam to junk folder (from http://archive.oreilly.com/pub/post/mutt_tweaks_for_spam_filtering.html adapted with https://stackoverflow.com/a/32391272/323100)
-macro index,pager S "<save-message>=Junk%20E-Mail<enter>"
+macro index,pager S "<save-message>=Junk-E-Mail<enter>"
