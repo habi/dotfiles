@@ -1,5 +1,5 @@
 # LaTeX
-*.aux
+*.aux*
 *.bbl
 *.bcf
 *.blg
