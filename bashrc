@@ -17,9 +17,9 @@ alias grep='grep --color=yes'
 alias less='less -R'
 
 # aliases
-alias 1172='xfreerdp /v:anaklin18.ana.unibe.ch /u:haberthu /w:1600 /h:1150'
-alias 1272='xfreerdp /v:anamic02.ana.unibe.ch /u:haberthu /w:1600 /h:1150'
-alias 2214='xfreerdp /v:anamic05.ana.unibe.ch /u:SkyScan4 /w:1600 /h:1150'
+alias 1172='xfreerdp /v:anaklin18.ana.unibe.ch /u:haberthu /w:1600 /h:1100'
+alias 1272='xfreerdp /v:anamic02.ana.unibe.ch /u:haberthu /w:1600 /h:1100'
+alias 2214='xfreerdp /v:anamic05.ana.unibe.ch /u:SkyScan4 /p:SkyScan2214 /w:1600 /h:1100'
 alias anaklin03='xfreerdp /v:anaklin03.ana.unibe.ch /u:haberthu /w:1600 /h:1150'
 alias anaklin04='xfreerdp /v:anaklin04.ana.unibe.ch /u:haberthu /w:1600 /h:1150'
 alias prism='xfreerdp /v:anasoft.ana.unibe.ch /u:haberthu /w:1600 /h:1150'

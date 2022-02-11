@@ -57,6 +57,7 @@ set sort           = threads
 set narrow_tree    = yes
 
 # HTML emails stink
+alternative_order text/enriched text/plain text/html text
 set implicit_autoview = yes
 auto_view text/html
 
