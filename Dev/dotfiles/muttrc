@@ -1,0 +1,88 @@
+# Set correct sender address and signature
+set realname         = "David Haberthür"
+set from             = "David Haberthür <david.haberthuer@unibe.ch>"
+set signature        = ~/P/uni-sig.txt
+
+# Set Inbox and SMTP server
+set imap_user           = haberthu
+set imap_pass           = $imappass
+set spoolfile           = imaps://mail.campus.unibe.ch/INBOX
+set folder              = imaps://mail.campus.unibe.ch
+set smtp_url            = "smtp://haberthu:$imappass@mail.campus.unibe.ch:587/"
+set ssl_starttls        = yes
+set smtp_authenticators = login
+set ssl_force_tls       = yes
+set postponed           = =Entwürfe
+set record              = "=Gesendete Elemente"
+set trash               = "=Gelöschte Elemente"
+set confirmappend       = no                         
+set imap_keepalive      = 300
+
+# Help with composing mails (some info from https://git.io/v7NeW)
+set alias_file       = ~/.mutt/aliases
+set sort_alias       = alias
+set reverse_alias    = yes
+source $alias_file
+set editor           = "vim +':set textwidth=0' +':set wrapmargin=0' +':set wrap'"
+set ispell           = "aspell -e -c"
+set charset          = "utf-8"
+#set locale=`echo "${LC_ALL:-${LC_TIME:-${LANG}}}"`
+#set send_charset="us-ascii:iso-8859-15:utf-8"
+#set file_charset="us-ascii:iso-8859-15:utf-8"
+
+# Replying, forwarding, saving mails
+set askcc             = yes      # Ask for 'CC:'
+set fast_reply        = yes      # Directly go to compose when replying, don't ask for subject
+set include           = yes      # Include message in reply
+set forward_edit      = ask-yes  # Automatically start editor when forwarding
+set forward_quote     = yes      # Include message in forward
+set mime_forward      = yes      # Forward files as attachments instead of inline
+set mime_forward_rest = yes      # Always forward other attachments, too
+set forward_decode    = no       # Don't decode MIME messages to text/plain when forwarding
+set include           = yes      # Include message in reply
+set reply_to          = yes      # Reply to 'Reply to:'
+set confirmappend     = no       # Do not ask for confirmation when saving messages
+
+# Some general settings from http://dev.mutt.org/trac/wiki/MuttGuide/UseIMAP and other sources
+set mail_check       = 60             # Reduce polling frequency to a sane level
+set header_cache     = ~/.mailcache   # Keep caches according to http://dev.mutt.org/trac/wiki/MuttGuide/Caching
+set message_cachedir = ~/.mailcache   # ditto
+set net_inc          = 5              # Display download progress every 5K
+set delete           = yes            # Don't ask to delete, just do it.
+set pager_stop       = yes            # Do not scroll jump into next message at the bottom of this message
+bind editor <space> noop              # Allow for spaces in folder names: http://forums.debian.net/viewtopic.php?f=10&t=80626
+
+# Display
+set sort           = threads
+set narrow_tree    = yes
+
+# HTML emails stink
+set implicit_autoview = yes
+auto_view text/html
+
+# Headers
+ignore *                                     # Ignore all headers
+unignore from: to: cc: bcc: date: subject:   # Do NOT ignore these
+hdr_order from: to: cc: bcc: date: subject:  # In this order please
+
+# Formats & Editor
+set forward_format = "Fwd: %s"
+set index_format   = "%Z | %-16.16L | %s"
+set status_format  = "-%r- %v ---[Folder: %f, Msgs: %m%?n? New: %n?%?d? Del: %d?%?t? Tag: %t?%?l? %l? ]%?p?---- .: %p waiting to send :. ?--%>- (%P) ---"
+
+# For the occasional email printout
+set print_command  = muttprint
+
+# Solarize this!
+# source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
+source ~/.mutt/mutt-colors-solarized-light-16.muttrc
+
+# Key bindings
+bind index G imap-fetch-mail  # http://unix.stackexchange.com/a/49986
+
+# Scan URLs in mails (https://is.gd/vHQcXf)
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs"
+
+# Save spam to junk folder (from http://archive.oreilly.com/pub/post/mutt_tweaks_for_spam_filtering.html adapted with https://stackoverflow.com/a/32391272/323100)
+macro index,pager S "<save-message>=Junk-E-Mail<enter>"
