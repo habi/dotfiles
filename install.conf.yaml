@@ -7,5 +7,7 @@
 - link:
     ~/.bashrc: bashrc
     ~/.vimrc: vimrc
+    ~/.mailcap: mailcap
     ~/.muttrc: muttrc
-    ~/.screenrc: screenrc
+    ~/.mutt/aliases: mutt/aliases
+    ~/.latexmkrc: latexmkrc
