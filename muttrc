@@ -5,10 +5,10 @@ set signature        = ~/P/uni-sig.txt
 
 # Set Inbox and SMTP server
 set imap_user           = haberthu
-set imap_pass           = $imappass
+set imap_pass           = $IMAPPASS
 set spoolfile           = imaps://mail.campus.unibe.ch/INBOX
 set folder              = imaps://mail.campus.unibe.ch
-set smtp_url            = "smtp://haberthu:$imappass@mail.campus.unibe.ch:587/"
+set smtp_url            = "smtp://haberthu:$IMAPPASS@mail.campus.unibe.ch:587/"
 set ssl_starttls        = yes
 set smtp_authenticators = login
 set ssl_force_tls       = yes
