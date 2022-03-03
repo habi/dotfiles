@@ -3,6 +3,10 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" change color scheme (see them here: https://github.com/flazz/vim-colorschemes)
+set t_Co=256
+set background=dark
+
 " General settings
 set number " Enable line numbers
 set title " Show the filename in the window titlebar
@@ -45,11 +49,6 @@ endif
 " Cursor things
 set cursorline " Highlight current line
 set nostartofline " Don’t reset cursor to start of line when moving around.
-
-" change color scheme (see them here: https://github.com/flazz/vim-colorschemes)
-syntax enable
-set background=light
-colorscheme solarized
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
