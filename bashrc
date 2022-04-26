@@ -15,8 +15,6 @@ if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 # do some coloring in the terminal
-alias ls="ls -F --color"
-alias ls='ls --color=yes'
 alias grep='grep --color=yes'
 alias less='less -R'
 
@@ -38,10 +36,10 @@ alias fiji='~/Downloads/Fiji.app/ImageJ-linux64'
 PATH=$HOME:$PATH
 export PATH
 
-# https://fahim-sikder.github.io/post/installing-texlive-latest-ubuntu/
-export PATH=/usr/local/texlive/2021/bin/x86_64-linux${PATH:+:${PATH}}
-export INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info${INFOPATH:+:${INFOPATH}}
-export MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man${MANPATH:+:${MANPATH}}
+# https://tex.stackexchange.com/a/95373/828
+export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH    
+export INFOPATH=$INFOPATH:/usr/local/texlive/2022/texmf-dist/doc/info
+export MANPATH=$MANPATH:/usr/local/texlive/2022/texmf-dist/doc/man
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -57,4 +55,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-

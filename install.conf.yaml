@@ -13,3 +13,4 @@
     ~/.latexmkrc: latexmkrc
     ~/.gitconfig: .gitconfig
     ~/.gitignore: .gitignore
+    ~/.config/espanso: espanso

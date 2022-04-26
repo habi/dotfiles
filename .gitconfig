@@ -40,3 +40,10 @@
     required = true
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
+[safe]
+	directory = /home/habi/P/Documents/Reviews/AppliedSciences-Branislav-LUT
+	directory = /home/habi/P/Documents/Semela-Liver
+	directory = /home/habi/P/Dev/blog/
+	directory = /home/habi/P/Dev/blog
+	directory = /home/habi/P/Dev/blog/
+	directory = /home/habi/P/Dev/blog
