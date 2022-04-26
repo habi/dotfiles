@@ -11,6 +11,13 @@ matches:
   # Simple text replacement
   - trigger: ":espanso"
     replace: "Hi there!"
+  - trigger: ":hugo"
+    replace: "{{< youtube >}}"
+  - trigger: ":md"
+    replace: "[]({{clipboard}})"
+    vars:
+      - name: "clipboard"
+        type: "clipboard"    
 
   # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
 
@@ -23,7 +30,17 @@ matches:
       - name: mydate
         type: date
         params:
-          format: "%m/%d/%Y"
+          format: "%d.%m.%Y"
+          locale: "de-CH"          
+  # Print today          
+  - trigger: ":today"
+    replace: "{{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%x"
+          locale: "de-CH"
 
   # Print the output of a shell command
   - trigger: ":shell"
