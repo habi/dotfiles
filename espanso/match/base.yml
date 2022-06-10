@@ -11,13 +11,17 @@ matches:
   # Simple text replacement
   - trigger: ":espanso"
     replace: "Hi there!"
+  - trigger: "mfg"
+    replace: "Mit freundlichen Grüssen\nDavid Haberthür"
   - trigger: ":hugo"
     replace: "{{< youtube >}}"
   - trigger: ":md"
     replace: "[]({{clipboard}})"
     vars:
       - name: "clipboard"
-        type: "clipboard"    
+        type: "clipboard"
+  - trigger: ":micro"
+    replace: "μ"
 
   # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
 
