@@ -75,8 +75,7 @@ set status_format  = "-%r- %v ---[Folder: %f, Msgs: %m%?n? New: %n?%?d? Del: %d?
 set print_command  = muttprint
 
 # Solarize this!
-# source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
-source ~/.mutt/mutt-colors-solarized-light-16.muttrc
+source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
 
 # Key bindings
 bind index G imap-fetch-mail  # http://unix.stackexchange.com/a/49986
