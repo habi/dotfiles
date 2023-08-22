@@ -4,4 +4,4 @@ $pdf_mode= 1;
 # -file-line-error make latex report file and line number when there is an error
 $pdflatex= 'pdflatex -synctex=1 -file-line-error %O %S';
 # https://tex.stackexchange.com/a/83386/828
-$clean_ext = 'synctex.gz synctex.gz(busy) run.xml tex.bak bbl bcf fdb_latexmk run tdo %R-blx.bib'
+$clean_ext = 'synctex.gz synctex.gz(busy) run.xml tex.bak bbl bcf fdb_latexmk run tdo %R-blx.bib snm nav'
