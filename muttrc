@@ -1,22 +1,26 @@
 # Set correct sender address and signature
 set realname         = "David Haberthür"
-set from             = "David Haberthür <david.haberthuer@unibe.ch>"
+set from             = "david.haberthuer@unibe.ch"
 set signature        = ~/P/uni-sig.txt
 
-# Set Inbox and SMTP server
-set imap_user           = haberthu
-set imap_pass           = $IMAPPASS
-set spoolfile           = imaps://mail.campus.unibe.ch/INBOX
-set folder              = imaps://mail.campus.unibe.ch
-set smtp_url            = "smtp://haberthu:$IMAPPASS@mail.campus.unibe.ch:587/"
-set ssl_starttls        = yes
-set smtp_authenticators = login
-set ssl_force_tls       = yes
-set postponed           = =Entwürfe
-set record              = "=Gesendete Elemente"
-set trash               = "=Gelöschte Elemente"
-set confirmappend       = no                         
-set imap_keepalive      = 300
+# set up for Office365, see https://www.vanormondt.net/~peter/blog/2021-03-16-mutt-office365-mfa.html
+# *Needs* an up-to-date `mutt`, (compiled from source, at least on Ubuntu 20.04)
+# Download http://ftp.mutt.org/pub/mutt/mutt-2.2.11.tar.gz and `tar -xvf` it
+# Then `./configure --enable-imap --enable-smtp --with-ssl` and `sudo make install`
+# because the old mutt version with Ubuntu 20.04 didn't manage to authenticate
+set hostname    = "unibe.ch"
+set imap_user   = "david.haberthuer@unibe.ch"
+set smtp_pass   = "$IMAPPASS"
+set imap_pass   = "$IMAPPASS"
+set folder      = "imaps://david.haberthuer@unibe.ch@outlook.office365.com"
+set spoolfile   = "+INBOX"
+set smtp_url    = "smtp://david.haberthuer@unibe.ch@smtp.office365.com:587"
+set imap_authenticators = "oauthbearer:xoauth2"
+set imap_oauth_refresh_command = "/home/habi/Dev/mutt_oauth2.py /home/habi/Dev/david.haberthuer.unibe.token"
+set smtp_authenticators = ${imap_authenticators}
+set smtp_oauth_refresh_command = ${imap_oauth_refresh_command}
+set ssl_force_tls = "yes"
+set ssl_starttls  = "yes"
 
 # Help with composing mails (some info from https://git.io/v7NeW)
 set alias_file       = ~/.mutt/aliases
@@ -45,9 +49,9 @@ set confirmappend     = no       # Do not ask for confirmation when saving messa
 
 # Some general settings from http://dev.mutt.org/trac/wiki/MuttGuide/UseIMAP and other sources
 set mail_check       = 60             # Reduce polling frequency to a sane level
-set header_cache     = ~/.mailcache   # Keep caches according to http://dev.mutt.org/trac/wiki/MuttGuide/Caching
-set message_cachedir = ~/.mailcache   # ditto
-set net_inc          = 5              # Display download progress every 5K
+#set header_cache     = ~/.mailcache   # Keep caches according to http://dev.mutt.org/trac/wiki/MuttGuide/Caching
+#set message_cachedir = ~/.mailcache   # ditto
+#set net_inc          = 5              # Display download progress every 5K
 set delete           = yes            # Don't ask to delete, just do it.
 set pager_stop       = yes            # Do not scroll jump into next message at the bottom of this message
 bind editor <space> noop              # Allow for spaces in folder names: http://forums.debian.net/viewtopic.php?f=10&t=80626
@@ -78,7 +82,7 @@ set print_command  = muttprint
 source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
 
 # Key bindings
-bind index G imap-fetch-mail  # http://unix.stackexchange.com/a/49986
+#bind index G imap-fetch-mail  # http://unix.stackexchange.com/a/49986
 
 # Scan URLs in mails (https://is.gd/vHQcXf)
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs"
