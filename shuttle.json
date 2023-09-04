@@ -1,11 +1,12 @@
 {
-	"terminal": "Terminal.app",
+	"terminal": "iTerm",
+	"iTerm_version": "stable",
 	"launch_at_login": true,
 	"show_ssh_config_hosts": true,
 	"hosts": [
 		{
-			"name": "Raspberry Pi",
-			"cmd": "ssh pi@192.168.1.128"
+			"name": "anaklin25",
+			"cmd": "ssh habi@anaklin25.ana.unibe.ch"
 		},
 		{
 			"name": "Balrog",
