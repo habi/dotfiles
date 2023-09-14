@@ -6,7 +6,8 @@ set signature        = ~/P/uni-sig.txt
 # set up for Office365, see https://www.vanormondt.net/~peter/blog/2021-03-16-mutt-office365-mfa.html
 # *Needs* an up-to-date `mutt`, (compiled from source, at least on Ubuntu 20.04)
 # Download http://ftp.mutt.org/pub/mutt/mutt-2.2.11.tar.gz and `tar -xvf` it
-# Then `./configure --enable-imap --enable-smtp --enable-hcache --with-ssl` and `sudo make install`
+# Install KyotoCabinet with `sudo apt-get install  libtokyocabinet-dev`
+# Then configure mutts build with `./configure --enable-imap --enable-smtp --enable-sidebar --enable-hcache --with-ssl` and `sudo make install`
 # because the old mutt version with Ubuntu 20.04 didn't manage to authenticate
 set hostname    = "unibe.ch"
 set imap_user   = "david.haberthuer@unibe.ch"
@@ -46,6 +47,7 @@ set forward_decode    = no       # Don't decode MIME messages to text/plain when
 set include           = yes      # Include message in reply
 set reply_to          = yes      # Reply to 'Reply to:'
 set confirmappend     = no       # Do not ask for confirmation when saving messages
+set sidebar_visible   = no
 
 # Some general settings from http://dev.mutt.org/trac/wiki/MuttGuide/UseIMAP and other sources
 set mail_check       = 60             # Reduce polling frequency to a sane level
