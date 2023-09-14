@@ -1,0 +1,20 @@
+{
+	"terminal": "iTerm",
+	"iTerm_version": "stable",
+	"launch_at_login": true,
+	"show_ssh_config_hosts": true,
+	"hosts": [
+		{
+			"name": "anaklin25",
+			"cmd": "ssh habi@anaklin25.ana.unibe.ch"
+		},
+		{
+			"name": "homeassistant.local",
+			"cmd": "ssh hassio@192.168.178.80"
+		}
+		{
+			"name": "Raspberry Pi",
+			"cmd": "ssh pi@192.168.1.128"
+		}
+	]
+}
