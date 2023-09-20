@@ -9,7 +9,6 @@
     ll = !git l --all
     # short status
     s = status -s
-    diff-image = "!f() { GIT_DIFF_IMAGE_ENABLED=1 git diff \"$@\"; }; f"
 [core]
     editor = vim
     excludesfile = ~/.gitignore
@@ -22,29 +21,12 @@
     whitespace = fix
 [color]
     ui = true
-[merge]
-    tool = meld
-[diff]
-    tool = meld
-[difftool]
-    prompt = false
-    tool = meld
 [help]
     autocorrect = 1
 [init]
     templatedir = ~/.git_template
-[push]
-    default = matching
 [filter "lfs"]
     process = git-lfs filter-process
     required = true
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
-[safe]
-	directory = /home/habi/P/Documents/Reviews/AppliedSciences-Branislav-LUT
-	directory = /home/habi/P/Documents/Semela-Liver
-	directory = /home/habi/P/Dev/blog/
-	directory = /home/habi/P/Dev/blog
-	directory = /home/habi/P/Dev/blog/
-	directory = /home/habi/P/Dev/blog
-	directory = /home/habi/P/Documents/EAWAG/manuscript
