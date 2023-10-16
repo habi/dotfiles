@@ -29,7 +29,7 @@ alias somafm='mplayer -really-quiet -vo none -volume 128 -playlist http://somafm
 alias goa='mplayer -really-quiet -vo none -volume 128 -playlist http://somafm.com/suburbsofgoa.pls'
 alias deep='mplayer -really-quiet -vo none -volume 128 -playlist https://somafm.com/beatblender.pls'
 alias m='cd && mutt && cd -'
-alias instaload='youtube-dl https://www.instapaper.com/rss/821883/5Syx27oaNKCCSCENuj71zTAE -i -w'i
+alias instaload='yt-dlp https://www.instapaper.com/rss/821883/5Syx27oaNKCCSCENuj71zTAE -i -w'
 alias fiji='~/Downloads/Fiji.app/ImageJ-linux64'
 alias josm='export GDK_SCALE=2 && josm'
 
