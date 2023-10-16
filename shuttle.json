@@ -11,7 +11,7 @@
 		{
 			"name": "homeassistant.local",
 			"cmd": "ssh hassio@192.168.178.80"
-		}
+		},
 		{
 			"name": "Raspberry Pi",
 			"cmd": "ssh pi@192.168.1.128"
