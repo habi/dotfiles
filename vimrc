@@ -1,11 +1,11 @@
 :" Use [pathogen](https://github.com/tpope/vim-pathogen) and [sensible.vim](https://github.com/tpope/vim-sensible]
 execute pathogen#infect()
-syntax on
 filetype plugin indent on
 
-" change color scheme (see them here: https://github.com/flazz/vim-colorschemes)
-set t_Co=256
-set background=dark
+" solarize color scheme
+syntax enable
+set background=light
+colorscheme solarized
 
 " General settings
 set number " Enable line numbers
