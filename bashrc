@@ -31,11 +31,7 @@ alias fiji='~/Downloads/Fiji.app/ImageJ-linux64'
 # path
 PATH=$HOME:$PATH
 export PATH
-
-# https://tex.stackexchange.com/a/95373/828
-export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH    
-export INFOPATH=$INFOPATH:/usr/local/texlive/2022/texmf-dist/doc/info
-export MANPATH=$MANPATH:/usr/local/texlive/2022/texmf-dist/doc/man
+export PATH=$HOME/.local/bin:$PATH
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
