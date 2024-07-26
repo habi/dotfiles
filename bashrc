@@ -27,7 +27,6 @@ alias deep='mplayer -quiet -vc null -vo null -volume 128 -playlist https://somaf
 alias m='cd && mutt && cd -'
 alias instaload='yt-dlp https://www.instapaper.com/rss/821883/5Syx27oaNKCCSCENuj71zTAE -i -w'
 alias fiji='~/Downloads/Fiji.app/ImageJ-linux64'
-alias josm='export GDK_SCALE=2 && josm'
 
 # path
 PATH=$HOME:$PATH
