@@ -9,7 +9,6 @@
     ~/.vimrc: vimrc
     ~/.mailcap: mailcap
     ~/.muttrc: muttrc
-    ~/.mutt/aliases: mutt/aliases
     ~/.latexmkrc: latexmkrc
     ~/.gitconfig: .gitconfig
     ~/.gitignore: .gitignore
