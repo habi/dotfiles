@@ -10,10 +10,6 @@ fi
 # set line beginning
 PS1="[\u@\h|\W]:"
 
-# solarized colors: https://michaelheap.com/getting-solarized-working-on-ubuntu/
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-fi
 # do some coloring in the terminal
 alias grep='grep --color=yes'
 alias less='less -R'
