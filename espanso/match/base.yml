@@ -9,12 +9,16 @@
 # it gets replaced by the "replace" string.
 matches:
   # Simple text replacement
-  - trigger: ":espanso"
-    replace: "Hi there!"
   - trigger: "mfg"
     replace: "Mit freundlichen Grüssen\nDavid Haberthür"
-  - trigger: ":hugo"
-    replace: "{{< youtube >}}"
+  - trigger: "ysc"
+    replace: "Yours sincerely\nDavid Haberthür"
+  - trigger: "olex"
+    replace: "Oleksiy"
+  - trigger: "oles"
+    replace: "Oleksiy"
+  - trigger: "hlus"
+    replace: "Hlushchuk"
   - trigger: ":md"
     replace: "[]({{clipboard}})"
     vars:
@@ -22,6 +26,12 @@ matches:
         type: "clipboard"
   - trigger: ":micro"
     replace: "μ"
+  - trigger: "uaf"
+    replace: "μAngiofil"
+  - trigger: ":yt"
+    replace: "{{< youtube >}}"
+  - trigger: ":vimeo"
+    replace: "{{< vimeo >}}"
 
   # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
 
@@ -35,8 +45,8 @@ matches:
         type: date
         params:
           format: "%d.%m.%Y"
-          locale: "de-CH"          
-  # Print today          
+          locale: "de-CH"
+  # Print today
   - trigger: ":today"
     replace: "{{mytime}}"
     vars:

@@ -71,10 +71,3 @@ let g:vim_markdown_frontmatter = 1
 " NERDtree: https://github.com/scrooloose/nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
-" Snippets
-iab ysc Yours sincerely<CR>David Haberthür<CR>
-iab mfg Mit freundlichen Grüssen<CR>David Haberthür<CR>
-iab sig --<CR>University of Bern<CR>Institute of Anatomy<CR>Dr. David Haberthür (usually off on Thursday)<CR>Post-Doc<CR>Baltzerstrasse 2<CR>CH-3000 Bern 9
-iab olex Oleksiy
-iab hlus Hlushchuk
-iab uaf μAngiofil

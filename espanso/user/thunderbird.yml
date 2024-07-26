@@ -1,0 +1,5 @@
+name: Thunderbird
+
+filter_class: "Thunderbird"
+backend: Clipboard
+paste_shortcut: CtrlShiftV
