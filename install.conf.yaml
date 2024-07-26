@@ -15,3 +15,10 @@
     ~/.git: git
     ~/.config/espanso: espanso
     ~/.shuttle.json: shuttle.json
+
+- create:
+    - ~/.vim/autoload
+    - ~/.vim/bundle
+
+- shell:
+  - [curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim]
