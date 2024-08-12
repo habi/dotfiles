@@ -17,6 +17,7 @@
     attributesfile = ~/.gitattributes
 	filemode = false
 	filemode = false
+	hooksPath = .git/hooks
 [apply]
     whitespace = fix
 [color]
@@ -30,3 +31,7 @@
     required = true
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
+[safe]
+	directory = /home/habi/P/Documents/EAWAG
+	directory = /home/habi/P/Documents/Hearts-Melly
+	directory = /home/habi/P/Documents/Publications/Ruslan Bone/manubot

@@ -22,3 +22,5 @@
 
 - shell:
   - [curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim]
+  - [git config --global core.hooksPath .git/hooks]
+  - [for i in ~/.git/hooks/*; do chmod g+x $i;done]
