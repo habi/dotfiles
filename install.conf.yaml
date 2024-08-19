@@ -10,17 +10,16 @@
     ~/.mailcap: mailcap
     ~/.muttrc: muttrc
     ~/.latexmkrc: latexmkrc
-    ~/.gitconfig: .gitconfig
-    ~/.gitignore: .gitignore
-    ~/.git: git
+    ~/.gitconfig: git/config
+    ~/.gitignore: git/ignore
+    ~/.git_template/hooks: git/hooks
     ~/.config/espanso: espanso
     ~/.shuttle.json: shuttle.json
 
 - create:
     - ~/.vim/autoload
     - ~/.vim/bundle
-
+    
 - shell:
   - [curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim]
-  - [git config --global core.hooksPath .git/hooks]
-  - [for i in ~/.git/hooks/*; do chmod g+x $i;done]
+  - [for i in ~/.git_template/hooks/*; do chmod g+x $i;done]
