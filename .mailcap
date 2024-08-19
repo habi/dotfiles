@@ -1,4 +1,0 @@
-text/html;		links -dump %s; nametemplate=%s.html; copiousoutput
-application/pdf;	mimeopen %s
-application/ics;        ~/.mutt/mutt-gcalcli.sh %s
-text/calendar; 		~/.mutt/mutt-gcalcli.sh %s
