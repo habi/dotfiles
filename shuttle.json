@@ -9,6 +9,10 @@
 			"cmd": "ssh habi@anaklin25.ana.unibe.ch"
 		},
 		{
+			"name": "boundary.sosm.ch",
+			"cmd": "ssh habi@213.144.137.117"
+		},
+		{
 			"name": "homeassistant.local",
 			"cmd": "ssh hassio@192.168.178.80"
 		},
