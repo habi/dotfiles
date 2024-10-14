@@ -11,8 +11,8 @@ fi
 PS1="[\u@\h|\W]:"
 
 # do some coloring in the terminal
-alias grep='grep --color=yes'
-alias less='less -R'
+#alias grep='grep --color=yes'
+#alias less='less -R'
 
 # aliases
 alias 1172='xfreerdp /v:anaklin18.ana.unibe.ch /u:haberthu /p:$IMAPPASS /size:1740x1080 /smart-sizing:3480x2160'
@@ -23,6 +23,7 @@ alias anaklin04='xfreerdp /v:anaklin04.ana.unibe.ch /u:haberthu /p:$IMAPPASS /si
 alias monster='xfreerdp /v:anamyct03.ana.unibe.ch /u:haberthu /p:$IMAPPASS /size:1740x1080 /smart-sizing:3480x2160'
 alias somafm='mplayer -quiet -vc null -vo null -playlist http://somafm.com/groovesalad.pls'
 alias goa='mplayer -quiet -vc null -vo null -playlist http://somafm.com/suburbsofgoa.pls'
+alias synphaera='mplayer -quiet -vc null -vo null -playlist http://somafm.com/synphaera.pls'
 alias deep='mplayer -quiet -vc null -vo null -volume 128 -playlist https://somafm.com/beatblender.pls'
 alias m='cd && mutt && cd -'
 alias instaload='yt-dlp https://www.instapaper.com/rss/821883/5Syx27oaNKCCSCENuj71zTAE -i -w'
