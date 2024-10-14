@@ -15,6 +15,7 @@
     ~/.git_template/hooks: git/hooks
     ~/.config/espanso: espanso
     ~/.shuttle.json: shuttle.json
+    ~/.config/pycodestyle: pycodestyle
 
 - create:
     - ~/.vim/autoload
