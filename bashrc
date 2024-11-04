@@ -1,7 +1,5 @@
 # .bashrc
 
-# User specific aliases and functions
-
 # Source global definitions
 if [ -f /etc/bash.bashrc ]; then
 	. /etc/bash.bashrc
@@ -9,10 +7,6 @@ fi
 
 # set line beginning
 PS1="[\u@\h|\W]:"
-
-# do some coloring in the terminal
-#alias grep='grep --color=yes'
-#alias less='less -R'
 
 # aliases
 alias 1172='xfreerdp /v:anaklin18.ana.unibe.ch /u:haberthu /p:$IMAPPASS /size:1740x1080 /smart-sizing:3480x2160'
