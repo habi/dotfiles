@@ -1,2 +1,8 @@
-# auto view using w3m
+# html via w3m
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
+# pdfs via pdftotext
+application/pdf; pdftotext -layout %s -; copiousoutput;
+# .docx and .odt via pandoc
+# via https://raymii.org/s/articles/Viewing_PDF_docx_and_odt_files_in_Mutt.html
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; pandoc --from docx --to markdown %s; copiousoutput
+application/vnd.oasis.opendocument.text; pandoc --from odt --to markdown %s; copiousoutput
