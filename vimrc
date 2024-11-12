@@ -14,12 +14,6 @@ set shortmess=atI " Don’t show the intro message when starting Vim
 set encoding=utf-8  " The encoding displayed.
 set fileencoding=utf-8  " The encoding written to file.
 
-" Arrow keys are unacceptable: http://is.gd/R4NwqI
-map <Left> :echo "Use h instead of the Left Arrow!"<cr>
-map <Right> :echo "Use l instead of the Right Arrow!"<cr>
-map <Up> :echo "Use k instead of the Up Arrow!"<cr>
-map <Down> :echo "Use j instead of the Down Arrow!"<cr>
-
 " Search
 set ignorecase " Ignore case of searches
 
