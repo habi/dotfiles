@@ -18,7 +18,7 @@ set fileencoding=utf-8  " The encoding written to file.
 set ignorecase " Ignore case of searches
 
 " Tab settings
-set shiftwidth=4  " Make tabs as wide as four spaces
+set shiftwidth=4 " Make tabs as wide as four spaces
 
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬
