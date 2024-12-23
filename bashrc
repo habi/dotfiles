@@ -30,6 +30,9 @@ PATH=$HOME:$PATH
 export PATH=$HOME/.local/bin:$PATH
 PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
 PATH=/home/habi/.cargo/bin:$PATH
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export PATH=/usr/local/cuda-12.6/bin${PATH:+:${PATH}}
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
