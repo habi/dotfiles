@@ -22,6 +22,8 @@ alias josm='export GDK_SCALE=2 && josm'
 alias groove='~/Dev/somafm-cli/src/somafm listen groovesalad'
 alias goa='~/Dev/somafm-cli/src/somafm listen suburbsofgoa'
 alias reggae='~/Dev/somafm-cli/src/somafm listen reggae'
+alias synphaera='~/Dev/somafm-cli/src/somafm listen synphaera'
+alias grep='grep --color=auto'
 
 # path
 PATH=$HOME:$PATH
