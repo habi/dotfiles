@@ -4,7 +4,7 @@ filetype plugin indent on
 
 " solarize color scheme
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
 " General settings
