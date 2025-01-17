@@ -129,7 +129,6 @@ alias monster='xfreerdp /v:anamyct03.ana.unibe.ch /u:haberthu /p:$IMAPPASS /size
 alias m='cd && mutt && cd -'
 alias instaload='yt-dlp https://www.instapaper.com/rss/821883/5Syx27oaNKCCSCENuj71zTAE -i -w'
 alias fiji='~/Downloads/Fiji.app/ImageJ-linux64'
-alias josm='export GDK_SCALE=2 && josm'
 alias groove='~/Dev/somafm-cli/src/somafm listen groovesalad'
 alias goa='~/Dev/somafm-cli/src/somafm listen suburbsofgoa'
 alias reggae='~/Dev/somafm-cli/src/somafm listen reggae'
