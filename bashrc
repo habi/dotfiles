@@ -154,4 +154,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH=/home/habi/.cargo/bin:$PATH
+. "$HOME/.cargo/env"
