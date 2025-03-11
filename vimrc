@@ -19,6 +19,8 @@ set ignorecase " Ignore case of searches
 
 " Tab settings
 set shiftwidth=4 " Make tabs as wide as four spaces
+" Use tab instead of CTRL+N for autocomplete
+inoremap <Tab> <C-n>
 
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬
