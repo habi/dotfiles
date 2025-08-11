@@ -10,6 +10,7 @@
     ~/.mailcap: mailcap
     ~/.muttrc: muttrc
     ~/.latexmkrc: latexmkrc
+    ~/.screenrc: screenrc
     ~/.gitconfig: git/config
     ~/.gitignore: git/ignore
     ~/.git_template/hooks: git/hooks
