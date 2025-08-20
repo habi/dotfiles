@@ -5,10 +5,6 @@
 	"show_ssh_config_hosts": true,
 	"hosts": [
 		{
-			"name": "anaklin25",
-			"cmd": "ssh -X habi@anaklin25.ana.unibe.ch"
-		},
-		{
 			"name": "anamyct05",
 			"cmd": "ssh -X habi@anamyct05.ana.unibe.ch"
 		},
