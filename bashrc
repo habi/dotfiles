@@ -120,7 +120,7 @@ fi
 # vvvv from me
 
 # aliases
-alias 1172='xfreerdp /v:anaklin18.ana.unibe.ch /u:haberthu /p:$IMAPPASS /size:1740x1080 /smart-sizing:3480x2160'
+alias 1172='xfreerdp /v:130.92.22.62 /u:SkyScan /p:SkyScan-1172 /cert:ignore /tls-seclevel:0 /size:1740x1080 /smart-sizing:3480x2160'
 alias 1272='xfreerdp /v:anamic02.ana.unibe.ch /u:haberthu /p:$IMAPPASS /size:1740x1080 /smart-sizing:3480x2160'
 alias 2214='xfreerdp /v:anamic05.ana.unibe.ch /u:SkyScan4 /p:SkyScan2214 /size:1740x1080 /smart-sizing:3480x2160'
 alias anaklin03='xfreerdp /v:anaklin03.ana.unibe.ch /u:haberthu /p:$IMAPPASS /size:1740x1080 /smart-sizing:3480x2160'
@@ -128,13 +128,14 @@ alias anaklin04='xfreerdp /v:anaklin04.ana.unibe.ch /u:haberthu /p:$IMAPPASS /si
 alias monster='xfreerdp /v:anamyct03.ana.unibe.ch /u:haberthu /p:$IMAPPASS /size:1740x1080 /smart-sizing:3480x2160'
 alias m='cd && mutt && cd -'
 alias instaload='yt-dlp https://www.instapaper.com/rss/821883/5Syx27oaNKCCSCENuj71zTAE -i -w'
-alias fiji='~/Downloads/Fiji.app/ImageJ-linux64'
+alias fiji='~/Downloads/Fiji/fiji-linux-x64'
 alias josm='export GDK_SCALE=2 && josm'
 alias groove='~/Dev/somafm-cli/src/somafm listen groovesalad'
 alias goa='~/Dev/somafm-cli/src/somafm listen suburbsofgoa'
 alias reggae='~/Dev/somafm-cli/src/somafm listen reggae'
 alias synphaera='~/Dev/somafm-cli/src/somafm listen synphaera'
 alias grep='grep --color=auto'
+alias rm='rm -I'
 
 # Load starship
 eval "$(starship init bash)"
@@ -155,3 +156,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 . "$HOME/.cargo/env"
+
+export PATH=/usr/local/texlive/2025/bin/x86_64-linux:$PATH
+
+. "$HOME/.local/bin/env"
