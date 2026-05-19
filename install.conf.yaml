@@ -17,6 +17,7 @@
     ~/.config/espanso: espanso
     ~/.shuttle.json: shuttle.json
     ~/.config/pycodestyle: pycodestyle
+    ~/.config/black: black
 
 - create:
     - ~/.vim/autoload
