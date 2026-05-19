@@ -1,8 +1,13 @@
-# html via w3m
-text/html; w3m -I %{charset} -T text/html; copiousoutput;
-# pdfs via pdftotext
-application/pdf; pdftotext -layout %s -; copiousoutput;
-# .docx and .odt via pandoc
-# via https://raymii.org/s/articles/Viewing_PDF_docx_and_odt_files_in_Mutt.html
+# HTML emails via w3m
+#text/html; w3m -I %{charset} -T text/html; copiousoutput
+# text/html; w3m -I %{charset} -T text/html; needsterminal
+text/html; w3m -I %{charset} -T text/html -o display_link_number=1; copiousoutput
+
+# PDF files via pdftotext
+application/pdf; pdftotext -layout %s -; copiousoutput
+
+# Word documents via pandoc
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; pandoc --from docx --to markdown %s; copiousoutput
+
+# OpenDocument text files via pandoc
 application/vnd.oasis.opendocument.text; pandoc --from odt --to markdown %s; copiousoutput
