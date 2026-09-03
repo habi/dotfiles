@@ -1,0 +1,11 @@
+# Top-level scan timeout (in milliseconds)
+# Immediately stops Starship from waiting more than 10ms on slow filesystems/mounts
+scan_timeout = 10
+
+[directory]
+# Truncate long paths to avoid extra stat calls
+truncation_length = 3
+
+[git_status]
+# Disable checking git status on slow network filesystems
+disabled = false

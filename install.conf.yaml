@@ -18,6 +18,8 @@
     ~/.shuttle.json: shuttle.json
     ~/.config/pycodestyle: pycodestyle
     ~/.config/black: black
+    ~/.config/starship.toml: starship.toml
+    ~/.config/tex-fmt/tex-fmt.toml: tex-fmt.toml
 
 - create:
     - ~/.vim/autoload
