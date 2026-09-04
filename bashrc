@@ -126,6 +126,7 @@ alias 2214='xfreerdp /v:anamic05.ana.unibe.ch /u:SkyScan4 /p:SkyScan2214 /size:1
 alias anaklin03='xfreerdp /v:anaklin03.ana.unibe.ch /u:haberthu /p:$IMAPPASS /size:1740x1080 /smart-sizing:3480x2160'
 alias anaklin04='xfreerdp /v:anaklin04.ana.unibe.ch /u:haberthu /p:$IMAPPASS /size:1740x1080 /smart-sizing:3480x2160'
 alias monster='xfreerdp /v:anamyct03.ana.unibe.ch /u:haberthu /p:$IMAPPASS /size:1740x1080 /smart-sizing:3480x2160'
+alias adgruppen='xfreerdp /v:id-rds-broker1.campus.unibe.ch /u:haberthu /d:CAMPUS /p:$IMAPPASS /g:id-rds-webgw1.campus.unibe.ch /gu:haberthu /gd:CAMPUS /gp:$IMAPPASS "/app:||dsa" "/load-balance-info:tsv://MS Terminal Services Plugin.1.UNI_APPS" /scale:180 /scale-desktop:180'
 alias m='cd && mutt && cd -'
 alias instaload='yt-dlp https://www.instapaper.com/rss/821883/5Syx27oaNKCCSCENuj71zTAE -i -w'
 alias fiji='~/Downloads/Fiji/fiji-linux-x64'
