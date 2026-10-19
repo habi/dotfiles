@@ -137,6 +137,7 @@ alias reggae='~/Dev/somafm-cli/src/somafm listen reggae'
 alias synphaera='~/Dev/somafm-cli/src/somafm listen synphaera'
 alias grep='grep --color=auto'
 alias rm='rm -I'
+alias markdownlint='markdownlint -c ~/.markdownlint.yaml'
 
 # Load starship
 eval "$(starship init bash)"

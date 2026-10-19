@@ -20,6 +20,7 @@
     ~/.config/black: black
     ~/.config/starship.toml: starship.toml
     ~/.config/tex-fmt/tex-fmt.toml: tex-fmt.toml
+    ~/.markdownlint.yaml: markdownlint.yaml
 
 - create:
     - ~/.vim/autoload
